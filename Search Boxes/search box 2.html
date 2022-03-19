@@ -1,0 +1,93 @@
+<html>
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.box{
+ height:90px;
+ background:#f9f9f9;
+ padding:30px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+.box h1{
+ font-size:40px;
+}
+.Search{ 
+ font-size:40px;
+ cursor:pointer;
+}
+.container{
+ background:#3498db;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ min-height:100vh;
+ visibility:hidden;
+ position:relative;
+}
+.container input{
+ width:300px;
+ height:50px;
+ -webkit-border-radius:30px;
+ outline:none;  
+ border:none;
+ text-align:center;
+ font-size:20px;
+}
+.container i{
+ cursor:pointer;
+ width:50px;
+ height:50px;
+ text-align:center;
+ background:#aaa;
+ line-height:50px;
+ -webkit-border-radius:30px;
+ margin-left:10px;
+}
+.close-button{
+ position:fixed;
+ top:120px;
+ right:40px;
+ font-size:30px;
+ background:none;
+}
+.container h1{
+ position:absolute;
+ top:320px;
+ transform:translateY(-70%);
+}
+.showed{
+ visibility:visible;
+ transition:0.5s all;
+}
+</style>
+</head>
+<body>
+<header class="box">
+<h1>Search Box</h1>
+<i class="fas fa-search Search"></i>
+</header>
+<div class="container">
+<div class="close-button"><i class="fas fa-times"></i></div>
+<h1>Search Here</h1>
+<input type="search" placeholder="Type Here">
+<i class="fas fa-arrow-right"></i>
+</div>
+<script type="text/javascript">
+ $(".Search").on("click",function(){
+    $(".container").toggleClass("showed");
+ });
+ $(".close-button").on("click",function(){
+    $(".container").toggleClass("showed");
+ });
+</script>
+</body>
+</html>

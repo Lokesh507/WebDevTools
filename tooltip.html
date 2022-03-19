@@ -1,0 +1,260 @@
+<html>
+<head>
+<style>
+
+body{text-align:center;}
+.tooltip{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ margin-left:40px;
+ z-index:1;
+}
+.tooltip:hover .tooltiptext{
+ visibility:visible;
+}
+
+.tooltip1{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext1{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ /*margin-left:40px;*/
+ z-index:1;
+}
+.tooltip1:hover .tooltiptext1{
+ visibility:visible;
+}
+
+.tooltip2{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext2{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ right:105%;
+ z-index:1;
+}
+.tooltip2:hover .tooltiptext2{
+ visibility:visible;
+}
+
+.tooltip3{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext3{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ bottom:100%;
+ left:50%;
+ margin-left:-60px;
+ z-index:1;
+}
+.tooltip3:hover .tooltiptext3{
+ visibility:visible;
+}
+
+.tooltip4{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext4{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ top:100%;
+ left:50%;
+ margin-left:-60px;
+ z-index:1;
+}
+.tooltip4:hover .tooltiptext4{
+ visibility:visible;
+}
+
+.tooltip5{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext5{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ top:150%;
+ left:50%;
+ margin-left:-60px;
+ z-index:1;
+}
+.tooltip5:hover .tooltiptext5{
+ visibility:visible;
+}
+.tooltip5 .tooltiptext5::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black  transparent;  /*border:top left bottom right*/
+}
+
+.tooltip6{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext6{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ bottom:130%;
+ left:50%;
+ margin-left:-60px;
+ z-index:1;
+}
+.tooltip6:hover .tooltiptext6{
+ visibility:visible;
+}
+.tooltip6 .tooltiptext6::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;  /*border:top left bottom right*/
+}
+
+.tooltip7{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext7{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ left:100%;
+ margin-left:10px;
+ z-index:1;
+}
+.tooltip7:hover .tooltiptext7{
+ visibility:visible;
+}
+.tooltip7 .tooltiptext7::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  margin-top: 2px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:transparent black transparent transparent;  /*border:top left bottom right*/
+}
+
+.tooltip8{
+ position:relative;
+ border-bottom:dotted;
+ display:inline-block;
+}
+.tooltiptext8{
+ position:absolute;
+ visibility:hidden;
+ color:#fff;
+ background-color:black;
+ padding:5px 0;
+ text-align:center;
+ -webkit-border-radius:4px;
+ width:120px;
+ right:110%;
+ top:-3px;
+ z-index:1;
+ opacity:0;
+ transition:opacity 1s;
+}
+.tooltip8:hover .tooltiptext8{
+ visibility:visible;
+ opacity:1;
+}
+.tooltip8 .tooltiptext8::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  margin-top: 3px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:transparent transparent transparent black;  /*border:top left bottom right*/
+}
+</style>
+</head>
+<body>
+<p>Move the mouse over the text below</p>
+<div class="tooltip">Hover Over Me<div class="tooltiptext">ToolTip Text</div></div><br><br><br>
+<div class="tooltip1">Hover Over Me<span class="tooltiptext1">ToolTip Text</span></div><br><br><br>
+<!-- here,span is used because span is used for inline-block elements.So,it is used when we want to insert the tooltip on the line of the element-->
+<div class="tooltip2">Hover Over Me<span class="tooltiptext2">ToolTip Text</span></div><br><br><br>
+<div class="tooltip3">Hover Over Me<span class="tooltiptext3">ToolTip Text</span></div><br><br><br>
+<div class="tooltip4">Hover Over Me<span class="tooltiptext4">ToolTip Text</span></div><br><br><br>
+<div class="tooltip5">Hover Over Me<span class="tooltiptext5">ToolTip Text</span></div><br><br><br>
+<div class="tooltip6">Hover Over Me<span class="tooltiptext6">ToolTip Text</span></div><br><br><br>
+<div class="tooltip7">Hover Over Me<span class="tooltiptext7">ToolTip Text</span></div><br><br><br>
+<div class="tooltip8">Hover Over Me<span class="tooltiptext8">ToolTip Text</span></div><br><br><br>
+</body>
+</html>

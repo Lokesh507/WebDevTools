@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+ background-size:400%;
+ animation:animate 16s infinite;
+}
+.text{
+ text-align:center;
+ color:white;
+ font-size:30px;
+ margin:350px 0;
+}
+/*@keyframes animate{
+ 0%{background-position:0% 0%;}
+ 25%{background-position:25% 0%;}
+ 50%{background-position:50% 60%;}
+ 100%{background-position:400% 400%;}
+}*/
+@keyframes animate{
+ 0%{background-position:0% 50%;}
+ 50%{background-position:100% 50%;}
+ 100%{background-position:0% 50%;}
+}
+</style>
+</head>
+<body>
+<div class="text">Gradient Colors</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+}
+.center{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:400px;
+ height:80px;
+}
+
+.center span{
+ display:inline-block;
+ -webkit-border-radius:50%;
+ width:40px;
+ height:40px;
+ margin:0 6px;
+}
+.one{
+ background:red;
+ animation:one 1s infinite;
+}
+.two{
+ background:blue;
+ animation:two 1s infinite;
+}
+.three{
+ background:green;
+ animation:three 1s infinite;
+}
+
+@keyframes one{
+25%{transform:scale(1);}
+50%{transform:scale(1.2);}
+75%{transform:scale(1);}
+100%{transform:scale(1);}
+}
+
+
+@keyframes two{
+25%{transform:scale(1);}
+50%{transform:scale(1.2);}
+75%{transform:scale(1);}
+100%{transform:scale(1);}
+}
+
+@keyframes three{
+25%{transform:scale(1);}
+50%{transform:scale(1.2);}
+75%{transform:scale(1);}
+100%{transform:scale(1);}
+}
+
+</style>
+</head>
+<body>
+<div class="center">
+<span class="one"></span>
+<span class="two"></span>
+<span class="three"></span>
+</div>
+</body>
+</html>

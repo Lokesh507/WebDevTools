@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body{
+ background:#3498db;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:50%;
+ font-size:50px;
+ text-align:center;
+ font-weight:900;
+ display:flex;
+ cursor:pointer; 
+ justify-content:center;
+}
+.container span{
+ background:#ecf0f1;
+}
+.one{
+ max-width:0;
+ opacity:0;
+ transition:0.5s ease-in;
+}
+.container:hover .one{
+ max-width:1em;
+ opacity:1;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<span>B</span>
+<span class="one">I</span>
+<span class="one">T</span>
+<span class="one">R</span>
+<span class="one">A</span>
+<span>L</span>
+<span class="one">O</span>
+<span class="one">K</span>
+<span class="one">E</span>
+<span class="one">S</span>
+<span class="one">H</span>
+</div>
+</body>
+</html>

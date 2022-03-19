@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<style>
+*{
+ margin:0;
+ padding:0;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:450px;
+ height:400px;
+ overflow:hidden;
+}
+.card img{
+ width:100%;
+ height:100%;
+}
+.heart{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ color:#f1f1f1;
+ font-size:0px;
+ opacity:0;
+ transition:0.4s all;
+}
+.card input{
+ position:absolute;
+ left:0;
+ top:0;
+ width:100%;
+ height:100%;
+ z-index:99999;
+ opacity:0;
+ cursor:pointer;
+}
+.card:hover .heart{
+ opacity:1;
+ font-size:100px;
+}
+.card input:checked + .heart{
+ color:#e74c3c;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<img src="image1.jpg">
+<input type="checkbox" class="check">
+<div class="heart">
+<i class="fas fa-heart"></i>
+</div>
+</div>
+</body>
+</html>

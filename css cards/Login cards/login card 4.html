@@ -1,0 +1,333 @@
+<html>
+<head>
+<base href="C:\Users\LOKESH\Desktop\Psvs\">
+<style>
+*{
+ box-sizing:border-box;
+}
+
+body{
+ background:url("login image2.webp");
+ background-repeat:no-repeat;
+ background-size:cover;
+ background-color:#ddd;
+}
+
+.card{
+ /*background:linear-gradient(270deg,hotpink,cyan,lightgreen);*/
+ /*opacity:0.8;*/
+ padding:30px;
+ /*background-color:#ffffff;*/
+ width:80%;
+ height:80%;
+ /*border:1px solid red;*/
+ margin-top:5%;
+ margin-left:5%;
+ -webkit-border-radius:10px;
+ }
+.leftcolumn{
+ float:left;
+ width:60%;
+ height:100%;
+ /*border:1px solid red;*/
+ -webkit-border-radius:10px;
+ }
+.signin{
+ padding:30px;
+ background-color:#ffffff;
+ background:linear-gradient(30deg,lightskyblue,black);
+ opacity:1;
+ text-align:center;
+ height:100%;
+ -webkit-border-radius:10px;
+}
+.signinform{
+ opacity:1;
+ padding:20px;
+}
+.signin h2{
+ color:red;
+}
+.signinform input[type=text]{
+ background-color:#ffffff;
+ width:30%;
+ -webkit-border-radius:14px;
+ padding:7px;
+ border:none;
+ outline:none
+}
+.signinform input[type=password]{
+ background-color:#ffffff;
+ width:30%;
+ -webkit-border-radius:14px;
+ padding:7px;
+  border:none;
+ outline:none
+}
+.signinform a{
+ text-decoration:none;
+ font-size:14px;
+ color:#ffffff;
+}
+.signinform input[type=submit]{
+ background-color:black;
+ color:red;
+ -webkit-border-radius:24px;
+ width:20%;
+ padding:10px;
+ text-align:center;
+}
+
+.rightcolumn{
+ padding-left:30px;
+ float:left;
+ width:40%;
+ /*background-color:#ffffff;*/
+ /*border:1px solid red;*/
+ transition:0.7s; 
+ -webkit-border-radius:10px;
+}
+.signin1{
+ position:relative;
+ height:100%;
+ background-color:black;
+ padding:30px;
+ -webkit-border-radius:10px;
+}
+.signin1 h1{
+ text-align:center;
+ color:#ffffff;
+}
+.signin1 p{
+ color:#ffffff;
+ text-align:center;
+ font-size:16px;
+}
+.signinbutton{
+ border:1px solid #ffffff;
+ -webkit-border-radius:24px;
+ padding:7px;
+ width:25%;
+ border:none;
+ outline:none;
+ cursor:pointer;
+ background-color:black;
+ /*margin-top:40%;*/
+ font-size:20px;
+ color:red;
+}
+span{
+ transition:.5s;
+ position:relative;
+}
+.signinbutton span:after{
+ content:'\00bb';
+ color:white;
+ position:absolute;
+ right:15px;
+ opacity:0;
+}
+.signinbutton:hover span{
+ padding-right:25px;
+}
+.signinbutton:hover span:after{
+ opacity:1;
+ right:0;
+}
+
+.signupbutton{
+ border:1px solid #ffffff;
+ -webkit-border-radius:24px;
+ padding:7px;
+ width:30%;
+ margin-left:34%;
+ border:none;
+ outline:none;
+ cursor:pointer;
+ background-color:black;
+ /*margin-top:40%;*/
+ font-size:20px;
+ color:red;
+}
+span{
+ transition:.5s;
+ position:relative;
+}
+.signupbutton span:after{
+ content:'\00bb';
+ color:white;
+ position:absolute;
+ right:15px;
+ opacity:0;
+}
+.signupbutton:hover span{
+ padding-right:25px;
+}
+.signupbutton:hover span:after{
+ opacity:1;
+ right:0;
+}
+
+@media only screen and (max-width:700px){
+  .card{
+       width:100%;
+  }
+  .leftcolumn{
+     position:relative;
+      width:100%;
+      margin-left:-24px;
+      
+  }
+  .signin{
+     width:100%;
+  }
+  .rightcolumn{
+     position:relative;
+     padding-top:24px;
+     width:100%;
+     margin-left:-50px;
+   }
+   .signin1{
+     width:105%;
+   }	
+}
+.overlay {
+  position: absolute;
+  bottom:100%;
+  width:100%;
+  height:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  background:linear-gradient(30deg,lightskyblue,#4CAF50);
+  transition: .5s ease;
+}
+
+.signin1:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding:30px;
+}
+.one{
+ position:absolute;
+ right:0;
+ left:150px;
+ border:none;
+ outline:none;
+ width:170px;
+ padding:7px;
+ -webkit-border-radius:7px;
+ transition:width 2s;
+ white-wrap:wrap;
+ }
+.two{
+  position:absolute;
+ right:0;
+ left:150px;
+ width:170px;
+ padding:7px;
+ -webkit-border-radius:7px;
+ border:none;
+ outline:none;
+ transition:width 2s;
+ }
+.three
+{
+  position:absolute;
+ right:0;
+ left:150px;
+ width:170px;
+ padding:7px;
+ -webkit-border-radius:7px;
+ border:none;
+ outline:none;
+ transition:width 2s;
+ }
+.four{
+ position:absolute;
+ right:0;
+ left:150px;
+ width:170px;
+ padding:7px;
+ -webkit-border-radius:7px;
+ border:none;
+ outline:none;
+ transition:width 2s;
+ }
+.five{
+ width:100px;
+ padding:10px;
+ -webkit-border-radius:24px;
+ border:none;
+ background-color:black;
+ color:red;
+ outline:none;
+ font-size:18px;
+ transition:width 2s;
+} 
+.one:focus{ 
+   width:200px;
+}
+.two:focus{ 
+   width:200px;
+}
+.three:focus{ 
+   width:200px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+   <div class="leftcolumn">
+       <div class="signin">
+          <h2>Sign In To PSVS</h2>
+	  <div class="signinform">
+	  <form action="C:\Users\LOKESH\Desktop\Psvs Login Setup.html" method="POST" id="ONE">
+      		<input type="text" name="User_ID" placeholder="Enter your User_ID"><br><br><br>
+		<input type="password" name="Password" placeholder="Enter your password"><br><br><br>
+		<a href="#">Forgot Your Password?</a><br><br><br>
+		<!--input type="submit" name="Submit" value="SIGN IN"><br><br><br-->
+		<button type="submit" class="signinbutton" name="SIGN IN"><span>SIGN IN<span></button>
+	  </form>
+	  </div>
+       </div>
+       
+   </div>
+   <div class="rightcolumn">
+       <div class="signin1">
+		<h1>Hello Friend!</h1>
+		<p>Enter your details and start journey with us</p><br><br><br><br><br><br>
+		<p>Don't have an account?</p>
+		
+		<button class="signupbutton"><span>Sign Up</span></button>
+		<div class="overlay">
+			<div class="text">
+				<p>Submit Your details to SIGN UP</p>
+				<form action="" method="POST">
+					First Name                     <input class="one" type="text" placeholder="Enter your First name" style="color:red;"><br><br>
+					Last Name<input class="one" type="text" placeholder="Enter your Last name" style="color:red;"><br><br>
+					Mail id<input class="two" type="email" placeholder="Enter your email" style="color:red;"><br><br>
+					Phone Number <input class="three" type="phone" placeholder="Enter your number" style="color:red;"><br><br>
+					City: <input class="one" type="text" placeholder="Enter your city" style="color:red;"><br><br>
+					Country: <select class="four" id="country"><br><br>
+						<option value="andhra pradesh">Andhra Pradesh</option>
+						<option value="telangana">Telangana</option>
+						</option>
+					</select><br><br><br><br>
+					<button class="five" type="submit" name="SIGN UP">SUBMIT</button>
+				</form>	
+				</form>
+			</div>
+		</div>
+       </div>
+       
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<style>
+body,html{
+ margin:0;
+ padding:0;
+}
+.menu{
+ max-width:100px;
+ float:left;
+ width:100%;
+ background:#34495e;
+ overflow:hidden;
+ display:flex;
+ margin-left:-100%;
+}
+.menu nav{
+ height:100%;
+ width:100%;
+ float:left;
+}
+.menu nav a{
+ display:block;
+ padding:30px 20px;
+ text-align:center;
+ font-size:40px;
+ color:#e74c3c;
+}
+.btn{
+ float:left;
+ padding:0 10px;
+ font-size:40px;
+ text-decoration:none;
+ color:#2c3e50;
+ font-family:Ionicons;
+ cursor:pointer;
+}
+.btn:before{
+ content:'\f20d';
+}
+.btnc:before{
+ content:'\f12a';
+}
+.menu.active{
+ margin-left:0;
+ transition:0.7s all;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+<nav>
+<a href="#"><i class="fas fa-home"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fas fa-headset"></i></a>
+</nav>
+</div>
+<a class="btn"></a>
+
+<script type="text/javascript">
+ $(".btn").on("click",function(){
+   $(".btn").toggleClass("btnc");
+   $(".menu").toggleClass("active");
+});
+</script>
+</body>
+</html>

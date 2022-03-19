@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+.button{
+ /*display:inline-block;*/
+ background-color:red;
+ vertical-align:middle;
+ padding:20px;
+ -webkit-border-radius:4px;
+ text-align:center;
+ width:200px;
+ cursor:pointer;
+ color:#ffffff;
+ margin:5px;
+ font-size:28px;
+
+}
+span{
+ transition:.5s;
+ position:relative;
+ }
+.button span:after{
+ position:absolute;
+ content:'\00bb';
+
+ right:-20px;
+ opacity:0;
+}
+.button:hover span{
+ padding-right:25px;
+}
+.button:hover span:after{
+ opacity:1;
+ right:0;
+}
+</style>
+</head>
+<body>
+<div class="button"><span>Hover</span></div>
+</body>
+</html>

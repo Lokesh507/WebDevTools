@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+
+        }
+        .card{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            max-width: 300px;
+            width: 100%;
+            color: white;
+            box-shadow: 0 0 2px 0 white;
+            background: linear-gradient(-30deg,#03a9f4 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+        }
+        .card .inner{
+            padding: 10px;
+            margin:20px;
+        }
+        .card .inner h3{
+            font-size: 20px;
+        }
+        .card .inner .details{
+            margin-top: 20px;
+            width: 220px;
+        }
+        .card .inner .details .username{
+            width:100%;
+            border:1px solid ;
+            padding: 5px;
+            margin-bottom: 10px;
+            background: transparent;
+            border-radius: 5px;
+        }
+        .card .inner .details .username input{
+            border:none;
+            outline: none;
+            color: white;
+        }
+        input::placeholder{
+            color: white;
+        }
+        .remember{
+            font-size: 15px;
+        }
+        .btn{
+            padding: 10px 20px;
+            text-align: center;
+            line-height: 60px;
+            color: black;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .forgot a{
+            font-size: 13px;
+            color: white;
+            text-decoration: none;
+        }
+        .forgot span{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="inner">
+            <h3>Login</h3>
+            <div class="details">
+                <div class="username">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="UserName">
+                </div>
+                <div class="username">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="remember">
+                    <input type="checkbox">
+                    <span>Remember Me</span>
+                </div>
+                    <a href="#" class="btn">LOGIN</a>
+                
+            </div>
+            <div class="forgot"><a href="#">Forgot <span>Password</span></a></div>
+            <div class="forgot"><a href="#">Need an <span>Account</span></a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+body{
+ counter-reset:course;
+}
+h1{
+ counter-reset:subcourse;
+}
+h1::before{
+ counter-increment:course;
+ content:"Course " counter(course) ":";
+}
+h2::before{
+ counter-increment:subcourse;
+ content:counter(course) "." counter(subcourse) ;
+}
+</style>
+</head>
+<body>
+<h1>Front End Course</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h1>BACK END Course</h1>
+<h2>JAVASCRPIT Tutorial</h2>
+<h2>VBSCRIPT Tutorial</h2>
+<h1>XML Course</h1>
+<h2>XML Tutorial</h2>
+<h2>XSL Tutorial</h2>
+</body>
+</html>

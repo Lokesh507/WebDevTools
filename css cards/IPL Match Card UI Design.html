@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'PT Sans', sans-serif;
+            background:url(stadium.jpg);
+            background-size: cover;
+        }
+        .card{
+            position: absolute;
+            width:800px;
+            height: 370px;
+            border:1px solid ;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 10px;
+            background-color: #d1d8e0;
+            overflow: hidden;
+        }
+        .card .header{
+            position: relative;
+            width:800px;
+            height: 50px;
+            margin-top: -21px;
+            border-radius: 10px;
+            text-align: center;
+            color:black;
+            z-index: 1;
+            transition: 0.5s all;
+        }
+        .card .header::before{
+            content: "";
+            position: absolute;
+            background:#FC427B;
+            width:100%;
+            height: 100%;
+            transition: 0.5s all;
+            border-radius: 10px;
+            top:0;
+            opacity: 0;
+            z-index: -1;
+            left: -100%;
+        }
+        .card:hover .header::before{
+            left: 0;
+            opacity: 1;
+        }
+        .card:hover .header{
+            color: white;
+        }
+        .card .info{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding:10px;
+            width: 800px;
+            height: 250px;
+            background:#d1d8e0;
+        }
+        .card .info .kkr img{
+            width:250px;
+            height: 250px;
+        }
+        .card .info .csk img{
+            width:250px;
+            height: 250px;
+            background: transparent;
+        }
+        .card .footer{
+            width: 800px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card .footer h2{
+            height: 50px;
+            position: relative;
+        }
+        .card .footer h2:nth-child(1){
+            width:55%;
+            position: relative;
+            z-index: 1;
+        }
+        .card .footer h2:nth-child(1)::after{
+            content: "";
+            position: absolute;
+            width:105%;
+            height: 100%;
+            z-index: -1;
+            top:0;
+            left: -50%;
+            background-color: blue;
+            
+            opacity: 0;
+            transition: 0.5s all;
+            clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+        }
+        .card .footer h2:nth-child(2)::after{
+            content: "";
+            position: absolute;
+            width:100%;
+            height: 100%;
+            z-index: -1;
+            top:0;
+            right: -50%;
+            opacity: 0;
+            background-color: yellow;
+            clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
+            transition: 0.5s all;
+        }
+        .card .footer h2:nth-child(2){
+            width:45%;
+            position: relative;
+            
+            z-index: 1;
+
+        }
+        .card .footer h2:nth-child(1) span{
+            margin:10px 10px 0;
+            float: left;
+        }
+        .card .footer h2:nth-child(2) span{
+            float: right;
+            margin:10px 10px 0;
+        }
+        .card:hover .footer h2:nth-child(1)::after{
+            opacity: 1;
+            left:  0;
+        } 
+        .card:hover .footer h2:nth-child(2)::after{
+            opacity: 1;
+            right: 0%;
+        } 
+        .card .info .about p{
+            width:40px;
+            margin: auto;
+            height: 40px;
+            background:#FC427B;
+            line-height: 40PX;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .card:hover .info{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+        <div class="card">
+            <div class="header">
+                <h1>Upcoming Match</h1>
+            </div>
+            <div class="info">
+                <div class="kkr"><img src="kkr1.jpg"></div>
+                <div class="about">
+                    <h2>October 29,19:30 IST</h2>
+                    <p>VS</p>
+                    <h3>Abu Dhabi Stadium,<span>Dubai</span></h3>
+                </div>
+                <div class="kkr"><img src="csk2.jpg"></div>
+            </div>
+            <div class="footer">
+                <h2><span>Kolkata Knight Riders</span></h2>
+                <h2><span>Chennai Super Kings</span></h2>
+            </div>
+        </div>
+</body>
+</html>

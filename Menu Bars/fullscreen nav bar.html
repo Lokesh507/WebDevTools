@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+}
+ul{
+ list-style-type:none;
+ display:block;
+ background-color:#f1f1f1;
+ margin:0;
+ max-width:10%;
+ height:100%;
+ padding:0px;
+}
+li a{
+ display:block;
+ color:#000;
+ padding:18px 16px;
+ text-decoration:none;
+}
+li a.active{
+ background-color:green;
+ color:white;
+}
+a:hover:not(.active){
+ color:white;
+ background-color:red;
+} 
+</style>
+</head>
+<body>
+<ul>
+<li><a  class="active" href="#">Home</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">About</a></li>
+</ul>
+<div style="margin-left:25px;">
+Fixed Full-height Side Nav
+Try to scroll this area, and see how the sidenav sticks to the page
+Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.
+
+Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).
+
+Some text..
+
+Some text..
+
+Some text..
+
+Some text..
+
+Some text..
+
+Some text..
+
+Some text..
+</div>
+</body>
+</html>

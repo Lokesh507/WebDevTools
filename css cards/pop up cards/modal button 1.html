@@ -1,0 +1,95 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<style>
+*{
+ margin:0; 
+ padding:0;
+}
+.btn{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ border:none;
+ outline:none;
+ font-size:20px;
+ border:2px solid #3498db;
+ padding:10px;
+ -webkit-border-radius:28px;
+ cursor:pointer;
+}
+.card{
+ position:fixed;
+ bottom:-300px;
+ right:20px;
+ width:400px;
+ height:200px;
+ display:flex; 
+ align-items:center;
+ justify-content:space-between;
+ box-shadow:0 0 20px #34495e;
+ overflow:hidden;
+ transition:1s;
+}
+.card img{
+ width:150%;
+ height:100%;
+}
+.box{
+ margin:0 10px;
+}
+.box h1{
+ color:black;
+ font-size:20px;
+ letter-spacing:2px;
+ text-decoration:underline;
+}
+.box p{
+ margin:5px 6px;
+ text-align:justify;
+ color:black;
+ font-size:19px;
+}
+kbd{
+ float:right;
+ color:black;
+ font-size:20px;
+}
+.hide{ 
+ position:absolute;
+ z-index:9999;
+ top:10px;
+ right:14px;
+ font-size:20px;
+ color:black;
+ opacity:0.7;
+ transition:0.3s;
+ cursor:pointer;
+}
+</style>
+</head>
+<body>
+<button class="btn" onclick="showmodal()">Show Modal</button>
+<div class="card">
+<img src="p1.png">
+
+<div class="box">
+<div class="hide fas fa-times" onclick="hidemodal()"></div>
+<h1>Luis D. Treadway</h1>
+<p>Iam a Full Stack Developer.I have been working in GOOGLE since 2025.It was a great opportunity to me to work in this company.My long-term goal is to become the HR in this company.</p>
+<kbd>Thank You...</kbd>
+</div>
+
+</div> 
+<script type="text/javascript">
+ var modal = document.getElementsByClassName("card")[0];
+ function showmodal(){
+   modal.style.bottom="20px";
+ }
+ function hidemodal(){
+   modal.style.bottom="-300px";
+ }
+</script>
+</body>
+</html>

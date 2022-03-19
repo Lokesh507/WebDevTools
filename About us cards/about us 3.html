@@ -1,0 +1,157 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#40739e;
+ font-family:"montserrat";
+}
+.container{
+ width:100%; 
+ color:white;
+}
+.inner{
+ max-width:1000px;
+ width:100%;
+ margin:auto;
+ padding:20px;
+}
+.inner h1{
+ text-transform:uppercase;
+ font-size:40px;
+ text-align:center;
+ margin-bottom:20px;
+ color:white;
+ font-weight:900;
+}
+
+.pics{
+ text-align:center;
+}
+.pics img{
+ width:100px;
+ height:100px;
+ margin:0 20px;
+ filter:grayscale(100%);
+ transition:0.3s;
+ -webkit-border-radius:50%; 
+ cursor:pointer;
+}
+.pics img:hover, .pics img.active{ 
+ filter:none;
+}
+.inner .border{
+ position:fixed;
+ left:50%;
+ transform:translateX(-50%);
+ width:120px;
+ height:4px;
+ background:#00a8ff;
+ margin-top:-20px;
+ text-align:center;
+ margin-bottom:10px;
+}
+
+
+
+.contents{
+ max-width:600px;
+ margin:auto;
+ text-align:justify;
+ padding:7px 20px;
+ font-size:20px;
+}
+.person{ 
+ display:none; 
+ color:white;
+}
+.person.active{
+ display:block;
+}
+.person p{
+ margin-bottom:20px;
+ margin-top:40px;
+}
+.description{
+ text-align:center;
+ font-size:40px;
+ letter-spacing:2px;
+ color:#fff;
+ margin:auto;
+ display:block;
+}
+.inner .border{
+ position:fixed;
+ left:50%;
+ transform:translateX(-50%);
+ width:120px;
+ height:4px;
+ background:#00a8ff;
+ margin-top:-20px;
+ text-align:center;
+ margin-bottom:10px;
+}
+.person .border1{
+ position:fixed;
+ left:50%;
+ transform:translateX(-50%);
+ width:120px;
+ height:4px;
+ background:#00a8ff;
+ margin-top:40px;
+ text-align:center;
+ margin-bottom:10px;
+ top:200px;
+}
+ 
+</style>
+</head>
+<body>
+<div class="section">
+<div class="inner">
+<h1>Our Team</h1>
+<span class="border"></span>
+<div class="pics">
+<img src="p2.png" class="active" alt="test-1">
+<img src="p3.png" alt="test-2">
+<img src="p4.png" alt="test-3">
+</div>
+
+<div class="contents">
+<div class="person active" id="test-1">
+            <span class="description">Natasha</span><span class="border1"></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+
+</div>
+
+<div class="person"  id="test-2">
+            <span class="description">Peter Parker</span>
+		<span class="border1"></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elimet, consectetur adipisicing eli t. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+
+</div>
+
+<div class="person" id="test-3">
+            <span class="description">Black Widow</span><span class="border1"></span>
+            <p>Lorem  similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+
+</div>
+
+
+</div>
+</div>
+</div>
+    <script type="text/javascript">
+      $('.pics img').click(function(){
+        $(".pics img").removeClass("active");
+        $(this).addClass("active");
+
+        $(".person").removeClass("active");
+        $("#"+$(this).attr("alt")).addClass("active");
+      });
+    </script>
+</body>
+</html>

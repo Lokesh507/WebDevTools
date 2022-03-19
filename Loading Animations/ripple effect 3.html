@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background-color:#3498db;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+}
+span{
+ top:0;
+ position:fixed;
+ -webkit-border-radius:50%;
+ background-color:#e74c3c;
+ width:20px;
+ height:20px;
+ transform:translateX(-50%) rotateX(70deg);
+ animation:ripple 4s linear infinite;
+}
+@keyframes ripple{
+ from{
+   border:4px solid #9b59b670;
+  }
+  to{
+    opacity:0;
+    top:20px;
+    width:400px;
+    height:400px;
+   }
+}
+.r1{
+  animation-delay:0.8s;
+}
+.r2{
+  animation-delay:1.6s;
+}
+.r3{
+  animation-delay:2.4s;
+}
+.r4{
+  animation-delay:3.2s;
+}
+.r5{
+  animation-delay:4s;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<span class="ripple r1"></span>
+	<span class="ripple r2"></span>
+	<span class="ripple r3"></span>
+	<span class="ripple r4"></span>
+	<span class="ripple r5"></span>
+</div>
+</body>
+</html>

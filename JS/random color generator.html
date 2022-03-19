@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#2f3640;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ text-align:center;
+ background:none;
+}
+.card h1{
+ color:white;
+ font-size:36px;
+ letter-spacing:2px;
+ padding:10px;
+ background:transparent;
+}
+button{
+ border:2px solid white;
+ font-size:30px;
+ text-align:center;
+ color:white;
+ padding:10px;
+ cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1 id="hex">#e74c3c</h1>
+<button onclick="getcolor()">Get It Now</button>
+</div>
+<script type="text/javascript">
+ var color,symbols;
+ symbols="0123456789ABCDEF";
+ function getcolor(){
+ color="#";
+ for(var i=0;i<6;i++){
+      color=color+symbols[Math.floor(Math.random()*16)];
+  }
+  document.body.style.background=color; 
+  document.getElementById("hex").innerHTML=color;
+}
+</script>
+</body>
+</html>

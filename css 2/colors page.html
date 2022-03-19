@@ -1,0 +1,114 @@
+<html>
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.card{
+ width:100%;
+ min-height:100vh;
+ display:flex;
+ flex-wrap:wrap;
+}
+.color{
+ flex:25%;
+ min-height:220px;
+ cursor:pointer;
+ position:relative;
+ transition:0.4s linear;
+}
+.color:hover{
+ filter:brightness(80%);
+}
+.refresh{ 
+ position:fixed;
+ top:20px; 
+ right:20px;
+ -webkit-border-radius:50%;
+ cursor:pointer;
+ font-size:18px;
+ background:#000;
+ color:#fff;
+ transition:0.4s linear;
+ width:30px;
+ height:30px;
+ border:none;
+}
+.refresh:hover{
+ transform:rotate(45deg);
+}
+.copied{
+ position:fixed;
+ bottom:30px;
+ text-align:center;
+ width:320px;
+ font-size:19px;
+ line-height:30px;
+ left:50%;
+ transform:translateX(-50%);
+ height:30px; 
+ background:#000;
+ color:#fff;
+ transition:0.4s linear;
+ display:none; 
+ cursor:pointer;
+}
+.colors{
+ position:absolute;
+ bottom:10%;
+ width:100%;
+ text-align:center;
+ font-size:24px;
+ line-height:2px;
+ font-weight:900;
+ color:#fff;
+}
+@media only screen and (max-width:800px){
+ .color{
+   flex:100%;
+ }
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="color">
+<div class="colors">#000000</div>
+</div>
+<div class="color">
+<div class="colors">#000000</div>
+</div>
+<div class="color">
+<div class="colors">#000000</div>
+</div>
+<div class="color">
+<div class="colors">#000000</div>
+</div>
+<button class="refresh"><i class="fas fa-sync-alt"></i></button>
+<div class="copied">The color is copied to clipboard.</div>
+</div>
+<script>
+ $('.refresh').click(function(){
+  $('.color').each(function(){
+  var Color='#'+Math.random().toString(16).substr(2,6);
+  $(this).css('background-color',Color);
+  $(this).children(".colors").text(Color);
+});
+}).trigger('click');
+
+$('.color').click(function(){
+ var input=$("<input>")
+ var color=$(this).children(".colors").text();
+ $('body').append(input);
+ input.val(color).select();
+ document.execCommand('copy');
+ input.remove();
+ $('.copied').fadeIn().delay(2000).fadeOut();
+});
+</script>
+</body>
+</html>

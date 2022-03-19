@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+        body{
+            text-decoration: none;
+            background: #000;
+        }
+        .one{
+            width:250px;
+            height: 50px;
+            border:1px solid ;
+            margin:10px;
+            padding:1em 0 0 1em;
+            float: left;
+        }
+        .one a{
+            text-decoration: none;
+            float: left;
+            width:30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .media1 a{
+            border-radius: 8px;
+            margin-left: 5px;
+        }
+
+        .one a:nth-child(1){
+            background-color: #4834d4;
+            color: white;
+        }
+        .one a:nth-child(2),a:nth-child(5){
+            background-color: white;
+            color: #4834d4;
+        }
+        .one a:nth-child(3){
+            background-color: white;
+            color: #e84118;
+        }
+        .one a:nth-child(4){
+            background-color: white;
+            color: pink;
+        }
+        .one a:nth-child(6){
+            background-color: #4834d4;
+            color: white;
+        }
+        .media2 a:nth-child(2){
+            background: #3498db;
+            color: white;
+        }
+        .media2 a:nth-child(1){
+            margin-left: 5px;
+            border-radius: 8px 0 0 8px  ;
+        }
+        .media2 a:nth-child(3){
+            background-color: #e84118;
+            color: white;
+        }
+        .media2 a:nth-child(4){
+            background-color: pink;
+            color: white;
+        }
+        .media2 a:nth-child(5){
+            border-radius: 0 8px 8px 0;
+            background: #3498db;
+            color: white;
+        }
+        .media3{
+            width:550px;
+            height: 30px;
+        }
+        .media3 a{
+            position: relative;
+            width:100px;
+            margin-right:10px;
+            height: 30px;
+        }
+        .media3 a::before{
+            position: absolute;
+            width:30px;
+            height: 30px;
+            left:0;
+            top:0;
+            
+        }
+        .media3 a:nth-child(1)::before{
+            content: "\f39e";
+            color: red;
+        }
+        .media4{
+            width:250px;
+            height: 50px;
+            border:1px solid ;
+            margin:10px;
+            padding:1em 0 0 1em;
+            float: left;
+        }
+        .media4 a{
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            text-decoration: none;
+            float: left;
+            width:30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            padding:0.5em;
+            transition: 0.5s;
+            color: #2c3e50;
+            background: transparent;
+        }
+        .media4 a:nth-child(2){
+            background: whitesmoke;
+        }
+        .media4 a:hover{
+            background: #3498db;
+        }
+        .two a{
+            transition: 0.5s;
+        }
+        .two a:hover{
+            background:lightgreen;
+        }
+        .layout{
+            clear: both;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            width: 60px;
+            height: 60px;
+            margin: 0 30px;
+            transform: rotate(-30deg) skew(25deg);
+            background: #ccc;
+        }
+        ul li span{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            background-color: #f3f3f3;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 30px !important;
+        }
+        ul li span.fb{
+            background-color: #dd4b39;
+        }
+        ul li span.tw{
+            background-color: #3b5999;
+        }
+        ul li span.goo{
+            background-color: #0077B5;
+        }
+        ul li span.pi{
+            background-color: #55acee;
+        }
+        ul li span.sk{
+            background-color: #e4405f;
+        }
+        ul li:hover span:nth-child(5){
+            opacity: 1;
+            transform: translate(40px,-40px) scale(1) rotate(30deg);
+        }
+        ul li:hover span:nth-child(4){
+            opacity: .8;
+            transform: translate(30px,-30px) scale(1) rotate(30deg);
+        }
+        ul li:hover span:nth-child(3){
+            opacity: .6;
+            transform: translate(20px,-20px) scale(1) rotate(30deg);
+        }
+        ul li:hover span:nth-child(2){
+            opacity: .4;
+            transform: translate(10px,-10px) scale(1) rotate(30deg);
+        }
+        ul li:hover span:nth-child(1){
+            opacity: .2;
+            transform: translate(0px,0px) scale(1) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="one media1">
+        <a  href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-google"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-skype"></a>
+    </div>
+    <div class="one media2">
+        <a  href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-google"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-skype"></a>
+    </div>
+    <!--div class="one media3">
+        <a  href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-google"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-skype"></a>
+    </div-->
+    <div class="one media3">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Google</a>
+        <a href="#">Pinterest</a>
+        <a href="#">Skype</a>
+    </div>
+    <div class="media4">
+        <a  href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-google"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-skype"></a>
+    </div>
+    <div class="one media1 two">
+        <a  href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-google"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-skype"></a>
+    </div>
+
+    <ul class="layout">
+        <li>
+            <a href="#">
+                <span class="fb"></span>
+                <span class="fb"></span>
+                <span class="fb"></span>
+                <span class="fb"></span>
+                <span class="fab fa-facebook-f fb"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="tw"></span>
+                <span class="tw"></span>
+                <span class="tw"></span>
+                <span class="tw"></span>
+                <span class="fab fa-twitter tw"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="goo"></span>
+                <span class="goo"></span>
+                <span class="goo"></span>
+                <span class="goo"></span>
+                <span class="fab fa-google goo"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="pi"></span>
+                <span class="pi"></span>
+                <span class="pi"></span>
+                <span class="pi"></span>
+                <span class="fab fa-pinterest pi"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="sk"></span>
+                <span class="sk"></span>
+                <span class="sk"></span>
+                <span class="sk"></span>
+                <span class="fab fa-skype sk"></span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

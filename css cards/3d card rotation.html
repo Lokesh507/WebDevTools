@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ width:380px;
+ height:380px;
+ transform:translate(-50%,-50%);
+ border:1px solid black;
+ transform-style:preserve-3d;
+ transform:transition 1s;
+}
+.card2{
+ position:relative;
+ width:100%;
+ height:100%;
+ perspective:1000px;
+ transform-style:preserve-3d;
+ transition:transform 1s;
+ 
+ cursor:pointer;
+}
+.front,.back{
+ width:100%;
+ height:100%;
+ position:absolute;
+ backface-visibility:hidden;
+ overflow:hidden;
+}
+.front{
+ background:pink;
+}
+.back{
+ background:yellow;
+  transform:rotateX(180deg);
+}
+.card:hover .card2{
+ transform:rotateX(-180deg);
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="card2">
+<div class="front">
+</div>
+<div class="back">
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body{
+ text-transform:uppercase;
+ background:#7ed6df;
+ font-family:sans-Serif;
+ color:red;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:400px;
+ padding:40px;
+ background:#ecedef;
+ border:1px solid green;
+}
+.name{
+ font-size:30px;
+ font-style:bold;
+ margin-bottom:4px;
+}
+.name2{
+ opacity:0.5;
+ color:#bbb;
+ margin-bottom:10px;
+}
+.shoe-image{
+ background-image:url("shoe5.jpg");
+ width:100%;
+ height:200px;
+ background-position:center;
+ background-size:cover;
+ margin-bottom:16px;
+}
+.colors{
+ display:flex;
+ justify-content:center;
+ margin-bottom:15px;
+}
+.colors span{
+ width:14px;
+ height:14px;
+ margin:0 10px;
+ cursor:pointer;
+ position:relative;
+ padding:1px;
+}
+.red{
+ background:#e74c3c;
+ -webkit-border-radius:50%;
+}
+.yellow{
+ background:#f1c40f;
+ -webkit-border-radius:50%;
+}
+.gray{
+ background:#20bf6b;
+ -webkit-border-radius:50%;
+}
+.blue{
+ background:#3867d6;
+ -webkit-border-radius:50%;
+}
+.colors .active::after{
+ content:"";
+ position:absolute;
+ width:22px;
+ height:22px;
+ left:-4px;
+ top:-4px;
+ transform:translate(-9%,-8%);
+ border:2px solid #8888;
+ -webkit-border-radius:50%;
+}
+.product-info{ 
+ display:flex;
+ align-items:center;
+}
+.price{ 
+ font-size:26px;
+}
+.product-info a{
+ text-decoration:none; 
+ font-size:20px;
+}
+.btn{
+ margin-left:auto;
+ color:#e74c3c;
+ border:2px solid ;
+ padding:8px 24px;
+ -webkit-border-radius:20px;
+ transition:0.4s linear;
+}
+
+</style>
+</head>
+<body>
+<div class="card">
+<div class="name">original shoes</div>
+<div class="name2">Lorem ipsum dolor sit amet</div>
+<div class="shoe-image">
+</div>
+<div class="colors">
+<span class="red active" data-color="#e74c3c" data-pic="url(shoe5.jpg)"></span>
+<span class="yellow" data-color="#f1c40f" data-pic="url(shoe6.jpg)"></span>
+<span class="gray" data-color="#20bf6b" data-pic="url(shoe7.jpg)"></span>
+<span class="blue" data-color="#3867d6" data-pic="url(shoe8.jpg)"></span>
+</div>
+<div class="product-info">
+<div class="price">$90</div>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div>
+<script>
+ $(".colors span").click(function(){
+   $(".colors span").removeClass("active");
+   $(this).addClass("active");
+   $("body").css("background",$(this).attr("data-color")); 
+   $("body").css("color",$(this).attr("data-color"));
+   $(".btn").css("color",$(this).attr("data-color"));
+   $(".shoe-image").css("background-image",$(this).attr("data-pic"));
+ });
+</script>
+</body>
+</html>

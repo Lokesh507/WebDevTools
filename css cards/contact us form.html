@@ -1,0 +1,99 @@
+<html>
+<head>
+<base href="C:\Users\bitra\Desktop\Web Development\css\">
+<style>
+body{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.card{
+ width:85%;
+ max-width:600px;
+ background:#f1f1f1;
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ padding:30px 40px;
+ box-sizing:border-box;
+ -webkit-border-radius:8px;
+ text-align:center;
+ box-shadow:0 0 20px #000000b3;
+ overflow:hidden;
+}
+.box{
+ width:100%;
+ border:1px solid #9b59b6;
+ padding:6px; 
+ -webkit-border-radius:8px;
+ overflow:hidden;
+ margin-top:4px;
+}
+.box h3{
+ font-size:12px;
+ text-transform:uppercase;
+ text-weight:900;
+ text-align:left;
+}
+.box input{
+ border:none; 
+ outline:none;
+ font-size:16px;
+ color:#34495e;
+ margin-top:-4px;
+ width:100%;
+ background:#f1f1f1;
+}
+.box textarea{
+ width:100%;
+ border:none;
+ outline:none;
+ background:#f1f1f1;
+ max-width:600px;
+}
+button{
+ width:100%;
+ text-align:center;
+ color:white;
+ font-size:20px;
+ font-weight:900;
+ text-transform:uppercase;
+ background:#8e44ad;
+ border:none;
+ outline:none;
+ cursor:pointer;
+ margin-top:20px;
+ padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+<div class="box">
+<h3>Full Name:</h3>
+<input type="text" placeholder="Enter Your Name">
+</div>
+
+<div class="box">
+<h3>Email:</h3>
+<input type="mail" placeholder="Enter Your Email">
+</div>
+
+<div class="box">
+<h3>Phone Number:</h3>
+<input type="phone" placeholder="Enter Your Phone Number">
+</div>
+
+<div class="box">
+<h3>Message:</h3>
+<textarea rows="4" cols="50">
+  </textarea>
+</div>
+
+<button>Send</button>
+
+</div>
+</body>
+</html>

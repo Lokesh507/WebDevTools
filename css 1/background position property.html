@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+                width: 400px;
+                height: 200px;
+                border: 5px solid #E18728;
+                margin-bottom: .5em;
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/codepen.png); 
+                background-repeat: no-repeat;
+                
+        }
+        #one{
+            background-position: 10px;   /*horizontal offset  will be taken if one value is given*/
+        }
+        #two{
+            background-position: 10px 35px;   /*horizontal and vertical offset will be taken if two values are given*/
+        }
+        #three{
+            background-position: right 45px bottom;  /*background image will be present at 45px from the right and 0 px from the bottom*/
+        }
+        #four{
+            background-position: right 45px bottom 20px;  /*background image will be present at 45px from the right and 20 px from the bottom*/
+        }
+        #five{
+            background-position: top 45px left 20px;  /*background image will be present at 45px from the top and 20 px from the left*/
+        }
+        #six{
+            background-position: top 45px right 20px;  /*background image will be present at 45px from the top and 20 px from the right*/
+        }
+        #seven{
+            background-position: center;
+        }
+        #eight{
+            background-position: left;
+        }
+        #nine{
+            background-position: bottom;
+        }
+        #ten{
+            background-position: top;
+        }
+        #eleven{
+            background-position: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="one">
+        <p><code>background-position: 10px;</code></p>
+    </div>
+    <div class="container" id="two">
+        <p><code>background-position: 10px 35px;</code></p>
+    </div>
+    <div class="container" id="three">
+        <p><code>background-position: right 45px bottom;</code></p>
+    </div>
+    <div class="container" id="four">
+        <p><code>background-position: right 45px bottom 20px;</code></p>
+    </div>
+    <div class="container" id="five">
+        <p><code>background-position: top 45px left 20px;</code></p>
+    </div>
+    <div class="container" id="six">
+        <p><code>background-position: top 45px right 20px;</code></p>
+    </div>
+    <div class="container" id="seven">
+        <p><code>background-position: center;</code></p>
+    </div>
+    <div class="container" id="eight">
+        <p><code>background-position: left;</code></p>
+    </div>
+    <div class="container" id="nine">
+        <p><code>background-position: bottom;</code></p>
+    </div>
+    <div class="container" id="ten">
+        <p><code>background-position: top;</code></p>
+    </div>
+    <div class="container" id="eleven">
+        <p><code>background-position: right;</code></p>
+    </div>
+</body>
+</html>

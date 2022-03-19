@@ -1,0 +1,111 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ border:1px solid ;
+ width:60%;
+ height:60%;
+}
+.container button{
+ position:absolute;
+ width:150px;
+ height:40px;
+ border:none;
+ outline:none;
+ text-transform:uppercase;
+ font-size:20px;
+ background:#54a0ff;
+ cursor:pointer;
+ transition:0.4s;
+ transform-style:preserve-3d;
+ perspective:800px;
+}
+.one{
+ left:20px;
+ top:20px;
+}
+.two{
+ right:20px;
+ top:20px;
+}
+.three{
+ left:20px;
+ bottom:20px;
+}
+.four{
+ right:20px;
+ bottom:20px;
+}
+.container button::after{
+ content:'';
+ position:absolute;
+ transition:0.4s;
+ background:#341f97;
+}
+.one:hover{
+ transform:rotateX(-20deg);
+}
+.one:after{
+ width:100%;
+ height:24px;
+ top:-24px;
+ left:0;
+ transform-origin:0 100%;
+ transform:rotateX(90deg);
+}
+
+.two:hover{
+ transform:rotateX(20deg);
+}
+.two:after{
+ width:100%;
+ height:24px;
+ top:100%;
+ left:0;
+ transform-origin:0 0;
+ transform:rotateX(-90deg);
+}
+
+.three:hover{
+ transform:rotateY(20deg);
+}
+.three:after{
+ width:30px;
+ height:100%;
+ left:-30px;
+ top:0;
+ transform-origin:100% 0;
+ transform:rotateY(-90deg);
+}
+
+.four:hover{
+ transform:rotateY(-20deg);
+}
+.four:after{
+ width:30px;
+ height:100%;
+ left:100%;
+ top:0;
+ transform-origin:0 0;
+ transform:rotateY(90deg);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<button class="one">Hover Me</button>
+<button class="two">Hover Me</button>
+<button class="three">Hover Me</button>
+<button class="four">Hover Me</button>
+</div>
+</body>
+</html>

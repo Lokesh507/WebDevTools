@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+div{
+ width:150px;
+ height:150px;
+ position:relative;  /* in animation we have to specify the position of an element in order to make a animation*/
+ background-color:white;
+ animation-name:one;
+ animation-duration:4s;
+ animation-iteration-count:3;
+ animation-direction:reverse; /*values are normal and reverse and alternate and alternate-reverse*/
+ animation-timing-function:ease-in; /* values are ease-in,ease-out,linear,ease-in-out*/
+}
+@keyframes one{
+ 0%{background-color:red;top:0px;left:0px;}
+ 25%{background-color:blue;top:0px;left:1000px;}
+ 50%{background-color:green;top:400px;left:1000px;}
+ 75%{background-color:yellow;top:400px;left:0px;}
+ 100%{background-color:white;top:0px,left:0px;}
+}
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

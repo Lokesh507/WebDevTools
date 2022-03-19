@@ -1,0 +1,61 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:500px;
+ height:500px;
+ cursor:pointer;
+ overflow:hidden;
+
+}
+.card img{
+ width:100%;
+ height:100%;
+ transition:0.4s all;
+}
+.inner{ 
+ position:absolute;
+ transition:0.4s all;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:100%;
+ height:100%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ opacity:0;
+ background:rgba(76,175,80,0.5);
+}
+.btn{
+ width:200px;
+ height:50px;
+ text-align:center;
+ background:#000;
+ line-height:50px;
+ -webkit-border-radius:24px;
+ color:#fff;
+ font-size:24px;
+ text-decoration:none;
+}
+.card:hover img{
+ transform:scale(1.2);
+}
+.card:hover .inner{
+ opacity:1;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<img src="p1.png">
+<div class="inner"><a href="#" class="btn">Show Item</a></div>
+</div>
+</body>
+</html>

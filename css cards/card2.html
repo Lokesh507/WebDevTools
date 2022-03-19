@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+ margin:0;
+ padding:0;
+ font-family:ionIcons;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%; 
+ transform:translate(-50%,-50%);
+ background:white;
+ color:#314652;
+ width:400px;
+ overflow:hidden;
+ box-shadow:1px 1px 12px black;
+}
+.header{
+ position:relative;
+ width:100%;
+ height:200px;
+
+}
+.header:before{
+ content:'';
+ position:absolute;
+/* border-top:30px solid #4CAF50;
+ border-left:400px solid cyan;*/
+ border-top:30px solid transparent;
+ border-left:400px solid white;
+ bottom:0;
+}
+.header img{
+ width:100%;
+ height:199px;
+}
+.content{
+ text-align:center;
+ padding:10px;
+ overflow:hidden;
+}
+.content h2{
+ margin:0 5px 0 0;
+ color:#0abde3;
+ text-align:center;
+}
+.media{
+ width:100%;
+ text-align:center;
+ position:relative;
+ padding:7px;
+}
+.media a{
+ font-size:24px;
+ padding:7px;
+ width:50px;
+ text-decoration:none;
+ background:#f2f2f2;
+ -webkit-border-radius:6px;
+}
+.media a:nth-child(1){
+ color:#222f3e;
+}
+.media a:nth-child(3){
+ color:green;
+}
+.footer{
+ background:black;
+ color:white;
+ padding:10px;
+ position:relative;
+ width:100%;
+ height:60px;
+ }
+.footer:before{
+ content:'';
+ position:absolute;
+ border-bottom:30px solid transparent;
+ border-right:400px solid white;
+ top:-1px;
+}
+.footer p{
+ margin:0;
+ padding:30px;
+ display:block;
+}
+</style>
+</head>
+<body>
+<div class="card">
+ <div class="header">
+   <img src="1.jpg">
+ </div>
+ <div class="content">
+   <h2>Natasha-Avenger</h2>
+   <h3>Web Designer-Web Creator</h3>
+   <p>Lorem Ipsum is imply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+ </div>
+ <div class="media">
+	<a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+	<a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+	<a href="#" class="fa fa-whatsapp" aria-hidden="true"></a>
+ </div>
+ <div class="footer">
+        <p>Coded By Bitra Lokesh</p>
+ </div>
+</div>
+</body>
+</html>

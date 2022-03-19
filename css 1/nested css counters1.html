@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+ol{
+ list-style-type:none;
+ counter-reset:section;
+}
+li::before{
+ counter-increment:section;
+ content:counters(section,".");
+}
+</style>
+</head>
+<body>
+<ol>
+ <li>Item</li>
+ <li>Item
+ <ol>
+  <li>Item</li>
+  <li>Item</li>
+  <li>Item
+  <ol>
+   <li>Item</li>
+   <li>Item</li>
+   <li>Item</li>
+ </ol>
+ </li>
+ <li>Item</li>
+ </ol>
+ <li>Item</li>
+ <li>Item</li>
+</ol>
+ </body>
+</html>

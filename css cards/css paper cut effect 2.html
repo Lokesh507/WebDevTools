@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            background:#efefef;
+        }
+.container{
+  margin:200px auto 0;
+  text-align:center;
+  padding:0;
+  font-family:Arial Black;
+  
+}
+.container span{
+  position:relative;
+  font-size:10em;
+  color:#ff2876;
+  text-shadow:-1px 0px 0px rgba(0,0,0,0.2);
+}
+.container span::before{
+  content:attr(data-title);
+  position:absolute;
+  top:0;
+  left:0;
+  color:#fff;
+  transform-origin:left;
+ transition:0.5s cubic-bezier(0,1.88,.83,.67);
+  transform:rotateY(25deg);
+  z-index:2;
+}
+.container span::after{
+  content:attr(data-title);
+  position:absolute;
+  top:0;
+  left:0;
+  color:rgba(0,0,0,0.1);
+  transform-origin:left;
+ transition:0.5s cubic-bezier(0,1.88,.83,.67);
+  transform:rotateY(5deg) scale(1.07 , 1) skewY(3deg);
+  z-index:1;
+  opacity:0.5;
+}
+
+.container span:hover::before{
+  transform:perspective(1000px) rotateY(-45deg);
+}
+
+.container span:hover::after{
+   transform:rotateY(0deg) scale(1.11 , 1) skewY(6deg);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="one" data-title="M">M</span>
+        <span class="one" data-title="U">U</span>
+        <span class="one" data-title="H">H</span>
+        <span class="one" data-title="A">A</span>
+        <span class="one" data-title="M">M</span>
+        <span class="one" data-title="M">M</span>
+        <span class="one" data-title="A">A</span>
+        <span class="one" data-title="D">D</span>
+    </div>
+</body>
+</html>

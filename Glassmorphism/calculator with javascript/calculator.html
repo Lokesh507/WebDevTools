@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="circles one"></div>
+    <div class="circles two"></div>
+    <div class="card" data-tilt>
+        <form action="#" name="form" class="form">
+            <input type="text" name="output" class="output" readonly>
+            <span class="num clear" name='c' onclick=" form.output.value ='' ">c</span>
+            <span class="num" name='/' onclick=" document.form.output.value +='/' ">/</span>
+            <span class="num" name='*' onclick=" document.form.output.value +='*' ">*</span>
+            <span class="num" name='7' onclick=" document.form.output.value +='7' ">7</span>
+            <span class="num" name='8' onclick=" document.form.output.value +='8' ">8</span>
+            <span class="num" name='9' onclick=" document.form.output.value +='9' ">9</span>
+            <span class="num" name='-' onclick=" document.form.output.value +='-' ">-</span>
+            <span class="num" name='4' onclick=" document.form.output.value +='4' ">4</span>
+            <span class="num" name='5' onclick=" document.form.output.value +='5' ">5</span>
+            <span class="num" name='6' onclick=" document.form.output.value +='6' ">6</span>
+            <span class="num add" name='+' onclick=" document.form.output.value +='+' ">+</span>
+            <span class="num" name='1' onclick=" document.form.output.value +='1' ">1</span>
+            <span class="num" name='2' onclick=" document.form.output.value +='2' ">2</span>
+            <span class="num" name='3' onclick=" document.form.output.value +='3' ">3</span>
+            <span class="num" name='0' onclick=" document.form.output.value +='0' ">0</span>
+            <span class="num" name='00' onclick=" document.form.output.value +='00' ">00</span>
+            <span class="num" name='.' onclick=" document.form.output.value +='.' ">.</span>
+            <span class="num equal" name='=' onclick=" document.form.output.value = eval(form.output.value) ">=</span>
+        </form>
+    </div>
+    <script type="text/javascript" src="tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+        });
+    </script>
+</body>
+
+</html>

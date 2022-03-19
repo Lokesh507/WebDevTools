@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+}
+.card{
+ width:100%:
+ overflow:hidden;
+ }
+.card img{
+ position:relative;
+ width:100%;
+}
+.pic{
+ width:20px;
+ cursor:pointer;
+ height:20px;
+ background:#9acd32;
+ -webkit-border-radius:50%;
+ animation:anim 1s infinite;
+ position:absolute;
+}
+.pic::before{
+ content:attr(text);
+ width:max-content;
+ position:absolute;
+ background:#222222dd;
+ color:#fff;
+ padding:8px 20px;
+ left:50%;
+ transform:translateX(-50%);
+ top:30px;
+ font-size:24px;
+ -webkit-border-radius:3px;
+ opacity:0;
+ transition:0.3s all;
+}
+.pic::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top:24px;
+  transform:translateX(-50%);
+  border-width:7px;
+  border-style: solid;
+  border-color: transparent transparent red transparent;  /*border:top left bottom right*/
+  opacity:0;
+  transition:0.3s all;
+}
+.pic:hover::before,
+.pic:hover::after{
+ opacity:1;
+}
+@keyframes anim{
+  from{
+   box-shadow:0 0 0 0 #9acd32;
+ }
+ to{
+   box-shadow:0 0 0 6px #9acd32;
+ }
+}
+.watch{
+ left:12%;
+ top:94%;
+ position:absolute;
+}
+.laptop{
+ position:absolute;
+ left:45%;
+ top:50%;
+}
+.plant{
+ position:absolute; 
+ left:80%;
+ top:40%;
+}
+.mouse{
+ position:absolute;
+ left:86%;
+ top:90%;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<img src="image.jpg">
+<div class="pic watch" text="watch"></div>
+<div class="pic laptop" text="Laptop"></div>
+<div class="pic plant" text="Plant"></div>
+<div class="pic mouse" text="Mouse"></div>
+</div>
+</body>
+</html>

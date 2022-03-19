@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+        .card{
+            position: absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 300px;
+        }
+        .card .front,.card .back{
+            position: absolute;
+            top:0;
+            left: 0;
+            transform-origin: bottom;
+            width: 100%;
+            height: 100%;
+        }
+        .card .front{
+            background-color: yellow;
+            transform-origin: top;
+        }
+        .card .back{
+            transform-origin: bottom;
+            background-color: rebeccapurple;
+        }
+        .card:hover .back{
+            transform:rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front"></div>
+        <div class="back"></div>
+    </div>
+</body>
+</html>

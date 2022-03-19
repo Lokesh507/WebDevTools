@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato|Prata&display=swap');
+        body{
+            margin: 0;
+            background-color: rgb(15,15,15);
+            color: white;
+            text-align: center;
+        }
+        h1,h2,h3{
+            font-family: 'Prata';
+            margin-top: 0;
+            margin-bottom: 2em;
+        }
+        p{
+            font-family: 'Lato';
+            color: rgb(160,160,160);
+            margin-top: 0;
+        }
+        .outer{
+            padding: 1em;
+        }
+        section{
+            column-count: 1;
+            column-gap: 2em;
+        }
+        img{
+            width:80%;
+            margin:1em 0 0;
+        }
+        @media only screen and (min-width:768px){
+            body{
+                text-align: left;
+                font-size: 18px;
+            }
+            p{
+                line-height: 1.6em;
+                
+            }
+            section{
+                column-count: 2;
+                column-rule-style: solid;
+                column-rule-color:rgb(43,43,43) ;
+            }
+            section > * {
+                margin-top:0;
+            }
+            h1{
+                font-size: 3rem;
+                margin:2em 0 1em;
+            }
+            .outer{
+                padding: 4em;
+            }
+            article{
+                padding: 2em;
+                background:#181818; 
+            }
+            h2{
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+            }
+            h2::before{
+                    position: absolute;
+                    content: "";
+                    width: 30%;
+                    height: 10px;
+                    z-index: -1;
+                    bottom: -.3em;
+                    left:-2em;
+                    background-color: purple;
+                    border-radius: 1em;
+            }
+            img{
+                width: 100%;
+            }
+            h3{
+                color:rgb(199,199,199);
+                margin:1.5em 0 1em;
+            }
+            p.span-all{
+                column-span: all;
+                font-size: 1.6em;
+                padding: 0.5em;
+                margin:2em 0;
+                color:white;
+                text-align: center;
+            }
+        }
+        @media only screen and (min-width:1100px){
+            .outer{
+                margin:0 auto;
+                width:80%
+            }
+            section{
+                column-count: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>This is a Beautiful Newspaper Headline</h1>
+        <article>
+            <h2>Get that Type going.</h2>
+            <section>
+                <p>Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.</p>
+                    <p>Ad nulla enim commodo excepteur ea. Aliquip consectetur cupidatat aliquip cillum laborum anim dolor nulla velit commodo in. Deserunt velit duis Lorem exercitation adipisicing dolore culpa amet excepteur. Occaecat aute ullamco nulla consectetur do occaecat eiusmod anim qui laboris elit consectetur quis proident. Anim enim mollit non cupidatat culpa sint incididunt dolor adipisicing labore aliqua. Culpa elit ipsum deserunt ullamco qui non elit anim labore ullamco occaecat amet.</p>
+                    <p>Cillum laborum enim exercitation incididunt nisi do dolor ipsum. Incididunt anim aute reprehenderit incididunt adipisicing ut aute deserunt culpa qui excepteur eu consectetur laborum. In do ipsum consequat laboris in ullamco sit tempor minim laboris.Ipsum ipsum non nostrud proident esse sunt.</p>
+                    <img src="image1.jpg">
+                <h2>Another Line</h2>
+                <p>Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.</p>
+                <p>Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi. Non do consectetur ut eu irure voluptate ad sint aute in amet minim.Ipsum ipsum non nostrud proident esse sunt. Fugiat adipisicing ea est id reprehenderit occaecat est. Amet eiusmod sit mollit nulla id velit commodo voluptate tempor nostrud nisi.</p>
+            </section>
+            <h2>Lets See Some More</h2>
+            <section>
+                <p>Commodo cillum deserunt culpa nulla sunt reprehenderit duis aute proident deserunt id Lorem quis. Laboris laboris sint sit ullamco dolore elit ea. Id deserunt adipisicing ea fugiat cupidatat commodo tempor. Et irure cillum voluptate pariatur deserunt culpa minim officia. Culpa duis duis incididunt voluptate commodo id deserunt laboris.</p>
+                <p>Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.</p>
+                <h3>All your base are belong to us!</h3>
+                <p>Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.Qui fugiat aliquip occaecat proident duis in do elit nostrud. Nulla voluptate quis veniam occaecat ut quis velit consequat Lorem magna laborum pariatur. Voluptate occaecat ea est eu ut deserunt ea eiusmod minim mollit voluptate exercitation. Aute do id deserunt reprehenderit aute.</p>
+                <p class="span-all">This is some cool, important text!</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors.</p>
+            </section>
+        </article>
+    </div>
+</body>
+</html>

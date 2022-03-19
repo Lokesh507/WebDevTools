@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background:black;
+    }
+    .clock{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 600px;
+        height: 600px;
+    }
+    .clock span{
+        position: absolute;
+        width:50px;
+        height: 2px;
+        background:white;
+    }
+    .clock span:nth-child(1){
+        top:14px;
+        left:50%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%);
+    }
+    .clock span:nth-child(2){
+        top:50px;
+        left:75%;
+        height: 50px;
+        width:2px;
+        transform: translateX(-50%) rotate(30deg);
+    }
+    .clock span:nth-child(3){
+        top:130px;
+        left:90%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(55deg);
+    }
+    .clock span:nth-child(4){
+        right:14px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .clock span:nth-child(5){
+        top:73%;
+        left:90%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(-60deg);
+    }
+    .clock span:nth-child(6){
+        top:84%;
+        left:70%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(-40deg);    
+    }
+    .clock span:nth-child(7){
+        bottom:14px;
+        left:50%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%);
+    }
+    .clock span:nth-child(8){
+        bottom:50px;
+        right:75%;
+        height: 50px;
+        width:2px;
+        transform: translateX(-50%) rotate(30deg);
+    }
+    .clock span:nth-child(9){
+        bottom:130px;
+        right:90%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(55deg);
+    }
+    .clock span:nth-child(10){
+        left:14px;
+        top:50%;
+        height:2px;
+        width:50px;
+        transform: translateX(-50%);
+    }
+    .clock span:nth-child(11){
+        bottom:73%;
+        right:90%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(-60deg);
+    }
+    .clock span:nth-child(12){
+        bottom:84%;
+        right:70%;
+        height:50px;
+        width:2px;
+        transform: translateX(-50%) rotate(-40deg);    
+    }
+    .c{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    .shand{
+        width:120px;
+        height:2px;
+        background:white;
+        position:absolute;
+        top:30px;
+        transform:rotate(-30deg);
+        right:-8px;
+    }
+    .bhand{
+        position:absolute;
+        width:400px;
+        height:2px;
+        left:50%;
+        transform: translate(-50%) rotate(0deg);
+        animation:clock 12s infinite;
+    }
+    .bhand div{
+        width:200px;
+        height:2px;
+        float:left;
+        background:white;
+    }
+    @keyframes clock {
+        7%{
+            transform: translateX(-50%) rotate(30deg);
+        }
+        15%{
+            transform: translateX(-50%) rotate(60deg);
+        }
+        25%{
+            transform: translateX(-50%) rotate(90deg);
+        }
+        34%{
+            transform: translateX(-50%) rotate(120deg);
+        }
+        43%{
+            transform: translateX(-50%) rotate(150deg);
+        }
+        51%{
+            transform: translateX(-50%) rotate(180deg);
+        }
+        60%{
+            transform: translateX(-50%) rotate(210deg);
+        }
+        68%{
+            transform: translateX(-50%) rotate(240deg);
+        }
+        76%{
+            transform: translateX(-50%) rotate(270deg);
+        }
+        84%{
+            transform: translateX(-50%) rotate(300deg);
+        }
+        92%{
+            transform: translateX(-50%) rotate(330deg);
+        }
+        100%{
+            transform: translateX(-50%) rotate(360deg);
+        }
+        
+    }
+</style>
+</head>
+<body>
+    <div class="clock">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="c">
+            <div class="shand"></div>
+            <div class="bhand">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

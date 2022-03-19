@@ -1,0 +1,67 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#e74c3c;
+}
+.box{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ height:40px;
+ -webkit-border-radius:40px;
+ background:#2f3640;
+ overflow:hidden; 
+ transition:0.4s linear;
+ padding:10px;
+}
+.search-text{
+ border:none;
+ background:none;
+ outline:none;
+ float:left;
+ padding:0;
+ color:white;
+ font-size:16px;
+ transition:0.4s;
+ line-height:40px;
+ width:0px;
+}
+.search-btn{
+ width:40px;
+ height:40px;
+ float:right;
+ color:#e84118;
+ -webkit-border-radius:50%;
+ background:#2f3640;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.search-btn i{
+ color:red;
+ background:none;
+}
+.box:hover .search-text{
+ width:240px;
+}
+.box:hover .search-btn{
+ background:white;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<input type="text" name="" placeholder="Type to search" class="search-text">
+<a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+</div>
+</body>
+</html>
+
+
+
+

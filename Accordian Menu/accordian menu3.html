@@ -1,0 +1,109 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#6c5ce7;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ background:#3498db;
+ box-shadow:0 0 20px #34495e;
+ color:white;
+ width:250px; 
+ overflow:hidden;
+}
+.item{
+ width:100%;
+ background:#3498db;
+ padding:10px 20px;
+ font-size:20px;
+ display:block;
+ border:1px solid #34495e;
+ text-decoration:none;
+ color:#fff;
+ position:relative;
+ overflow:hidden;
+}
+.item i{
+ color:#fff;
+ margin-right:10px;
+ background:none;
+}
+.menu{
+ width:100%;
+ transition:0.4s all;
+
+}
+.menu a{
+ display:none;
+ text-decoration:none;
+ background:black;
+ width:100%;
+ padding:10px 20px;
+ font-size:20px;
+ color:#fff; 
+ position:relative; 
+ border-bottom:1px solid #34495e;
+}
+.menu a:before{
+ position:absolute;
+ content:'';
+ background:#3498db;
+ width:5px;
+ height:100%;
+ top:0;
+ left:-20px;
+ transition:0.3s all;
+}
+.menu a:hover:before{
+ left:0;
+}
+.item:before{
+ position:absolute;
+ content:"";
+ width:14px;
+ height:14px;
+ background:#8e44ad;
+ left:20px;
+ bottom:-10px;
+ transform:rotate(45deg);
+ display:none;
+}
+:target a{
+ display:block;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<a href="#one" class="item"><i class="fas fa-user"></i>Profile</a>
+<section id="one" class="menu">
+<a href="#">Posts</a>
+<a href="#">Picture</a>
+</section>
+<a href="#two" class="item"><i class="far fa-envelope"></i>Messages</a>
+<section id="two" class="menu">
+<a href="#">New</a>
+<a href="#">Sent</a>
+<a href="#">Spam</a>
+</section>
+<a href="#three" class="item"><i class="fas fa-cogs"></i>Settings</a>
+<section id="three" class="menu">
+<a href="#">Password</a>
+<a href="#">Language</a>
+</section>
+<a href="#four" class="item"><i class="fas fa-sign-out-alt"></i>Logout</a>
+<section id="four" class="menu">
+<a href="#">Last Login</a>
+<a href="#">Thank You..</a>
+</section>
+</div>
+</body>
+</html>

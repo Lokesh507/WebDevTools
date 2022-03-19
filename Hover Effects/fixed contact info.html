@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .menu{
+            position: fixed;
+            top:40%;
+            z-index: 99999;
+            left:0;
+        }
+        .about{
+            cursor: pointer;
+            position: relative;
+        }
+        .about i{
+            display: block;
+            font-size: 20px;
+            width:60px;
+            height:60px;
+            transition: 0.6s;
+            background-color: #f1f1f1;
+            color: #b9b9b9;
+            text-align: center;
+            line-height: 60px;
+        }
+        .about:hover i{
+            color:#3498db;
+        }
+        .text{
+            position: absolute;
+            height:60px;
+            width: 200px;
+            background-color: #1b1b1b;
+            top:0;
+            left:-140px;
+            color: #fff;
+            line-height: 60px;
+            text-align: center;
+            transition: 0.6s;
+            z-index:-1;
+        }
+        .about:hover .text{
+            left:60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="about">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="text">India</div>
+        </div>
+        <div class="about">
+            <i class="fas fa-envelope"></i>
+            <div class="text">96@postbox.com</div>
+        </div>
+        <div class="about">
+            <i class="fas fa-phone-alt"></i>
+            <div class="text">+7013864949</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:url('sea.webp') no-repeat;
+ background-position:cover;
+ background-size:100% 100%;
+}
+.container{
+ padding:100px 40px;
+ text-align:center;
+ color:black;
+}
+.container p{
+ margin:40px auto;
+ max-width:600px;
+ font-size:30px;
+}
+.email-box{
+ height:40px;
+ display:flex;
+ justify-content:center;
+}
+.email-box i{
+ background:#2f3542;
+ width:40px;
+ line-height:40px;
+ color:white;
+ cursor:pointer;
+}
+.container i{
+ border:none;
+ outline:none;
+}
+.inp,.btn{
+ border:none; 
+ outline:none;
+}
+.btn{
+ background:#2f3542;
+ cursor:pointer;
+ color:white;
+ padding:0 10px;
+ text-transform:uppercase
+}
+.inp{
+ width:0;
+ overflow:hidden;
+}
+.email-box:hover  .inp{
+ width:260px;
+ padding:0 10px;
+ transition:all 0.9s;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<form action="">
+<h1>Join Our Newsletter</h1>
+<p>Lorem Ipsum is simply dummy text of the printing and typeseetting industry.Lorem ipsum has been the industry's standard dummy text ever since 1500's.</p>
+<div class="email-box">
+<i class="fas fa-envelope"></i>
+<input class="inp" type="email" name="email" placeholder="Enter your email">
+<button class="btn" type="submit">Subscribe</button>
+</div>
+</form>
+</div>
+</body>
+</html>

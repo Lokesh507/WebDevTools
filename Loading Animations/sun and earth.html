@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:#000;
+}
+.container{
+ width:120px;
+ height:120px;
+ padding:40px;
+ position:relative;
+ margin:200px auto;
+}
+.sun{
+ background:url('sun.jpg') no-repeat;
+ background-size:contain;
+ -webkit-border-radius:50%;
+ width:120px;
+ height:120px;
+}
+.earth{
+ background:url('earth.jpg') no-repeat;
+ background-size:contain;
+ -webkit-border-radius:50%;
+ width:60px;
+ height:60px;
+ left:0;
+ top:0;
+ animation:ro 4s infinite;
+ position:absolute;
+ box-shadow:20px 20px 10px 2px #000000cc;
+}
+@keyframes ro{
+ 50%{
+     left:calc(100% - 40px);
+     top:calc(100% - 40px);
+ }
+ 100%{
+      z-index:-1;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="sun"></div>
+	<div class="earth"></div>
+</div>
+</body>
+</html>

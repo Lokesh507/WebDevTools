@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .bg{
+            background: url(image1.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            width:100%;
+            height:400px;
+            background-color: red;
+            
+        }
+        .one{
+            background-blend-mode: screen;
+        }
+        .two{
+            background-blend-mode: normal;
+        }
+        .three{
+            background-blend-mode:hue;
+        }
+        .four{
+            background-blend-mode: saturation;
+        }
+        .five{
+            background-blend-mode: color;
+        }
+        .six{
+            background-blend-mode: luminosity;
+        }
+        .seven{
+            background-blend-mode:lighten;
+        }
+        .eight{
+            background-blend-mode:soft-light;
+        }
+        .nine{
+            background-blend-mode:unset;
+        }
+    </style>
+</head>
+<body>
+    <p>Background blend mode:screen...screen: both image and color is inverted, multiplied and then inverted again.</p>
+    <div class="bg one"></div>
+    <p>Background blend mode:normal..</p>
+    <div class="bg two"></div>
+    <p>hue: the result is the hue of the background-image combined with the luminosity and saturation of the background-color.</p>
+    <div class="bg three"></div>
+    <p>saturation: keeps the saturation of the background-image whilst mixing the hue and luminosity of the background-color.</p>
+    <div class="bg four"></div>
+    <p>color: keeps hue and saturation of background-image and the luminosity of the background-color. In this example because the image is gray and the effect preserves gray levels all we get is a big gray blob.</p>
+    <div class="bg five"></div>
+    <p>luminosity: luminosity of the top color is preserved whilst using the saturation and hue of the background-color.</p>
+    <div class="bg six"></div>
+    <p>lighten: if the background-image is lighter than the background-color then the image is replaced, otherwise it is left as it was.</p>
+    <div class="bg seven"></div>
+    <p>soft-light: the final result is similar to hard-light but softer in that it looks like a diffused spotlight has been placed on the image.</p>
+    <div class="bg eight"></div>
+    <p>Un-set</p>
+    <div class="bg nine"></div>
+
+
+
+</body>
+</html>

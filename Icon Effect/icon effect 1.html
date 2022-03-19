@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#8e44ad;
+ text-decoration:none;
+}
+.card{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ text-align:center;
+ width:30px;
+ height:250px;
+ overflow:hidden;
+}
+.User{
+ color:#2c3e50; 
+ font-size:24px;
+}
+.menu{
+ background:#2c3e50;
+ height:100%;
+ width:100%;
+ margin-top:20px;
+ position:relative;
+ display:none;
+}
+.menu.active{
+ display:block;
+}
+.menu::before{
+ content:"";
+ position:absolute;
+ width:14px;
+ height:14px;
+ left:50%;
+ top:-7px;
+ transform:translateX(-50%) rotate(45deg);
+ background:#2c3e50;
+} 
+.menu a{
+ background:transparent;
+ display:block;
+ color:white;
+ font-size:24px;
+ margin-bottom:20px;
+ text-align:center;
+}
+.menu a i{
+ background:none;
+ margin-top:10px;
+}
+.menu a i:hover{
+ transform:scale(1.1);
+}
+</style>
+</head>
+<body>
+<div class="card">
+<a href="#" class="one"><i class="fas fa-user User"></i></a>
+<div class="menu">
+<a href="#"><i class="fab fa-google Google"></i></a>
+<a href="#"><i class="fab fa-google-play"></i></a>
+<a href="#"><i class="fab fa-google-pay"></i></a>
+<a href="#"><i class="fab fa-google-drive"></i></a>
+</div>
+</div>
+<script type="text/javascript">
+ $(".User").on("click",function(){
+   $(".menu").toggleClass("active");
+});
+</script>
+</body>
+</html>

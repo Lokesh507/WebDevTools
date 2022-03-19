@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            -moz-column-gap: 0;
+            -webkit-column-gap: 0;
+            column-gap: 0;
+        }
+        body{
+            padding: 2rem;
+        }
+        .controls{
+                background-color: #eaeaea;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(2, 1fr);
+                justify-content: center;
+                padding: 25px 0;
+                text-align: center;
+                width: 100%;
+        }
+        .one{
+            width:700px;
+            height: 200px;
+            background-color: #ddd;
+        }
+        input {
+            margin-right: 15px;
+            width: 100%;
+          }
+        .wrapper {
+            margin: 0 auto;
+            width: 50%;
+          }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: var(--column-gap);
+            column-gap: var(--column-gap);
+            
+        }
+        .grid-item{
+            align-items: center;
+            background: orange;
+            display: flex;
+            height: max(200px, 25vh);
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <p>Slide to update the <code>column-gap</code> value</p>
+        <div class="controls__wrapper">
+          <input id="slider" type="range" min="0" max="100" step="1" oninput="sliderChange(this.value)">
+          <output id="output"></output>
+        </div>
+      </div>
+      
+      <div class="grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+      <script type="text/javascript">
+            let root=document.documentElement;
+            const grid=document.getElementsByClassName("grid");
+            const slider= document.getElementById("slider");
+            const output=document.getElementById("output");
+            function sliderChange(val){
+                root.style.setProperty("--column-gap", val + "px");
+                output.innerHTML = val + "px";
+            }
+            slider.value=0;
+      </script>
+</body>
+</html>

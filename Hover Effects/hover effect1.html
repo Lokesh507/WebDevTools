@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<style>
+body{
+ margin:0;
+ padding:0;
+ background-color:#f1f1f1;
+}
+#btn{
+ position:absolute;
+ background-color:#ffc107;
+ width:200px;
+ height:60px;
+ left:50%;
+ top:50%;
+ traansform:translate(-50%,-50%);
+ cursor:pointer;
+ transition:all 0.5s;
+ overflow:hidden;
+}
+#btn:before{
+ content:'Hover me';
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ font-size:20px;
+ transition:all 0.5s;
+}
+#btn:hover:before{
+ top:-30px;
+ transition:all 0.5s;
+}
+#btn:after{
+ font-family:'Ionicons';
+ content:'\f141';
+ color:#f44336;
+ position:absolute;
+ left:50%;
+ top:140%;
+ transform:translate(-50%,-50%);
+ font-size:40px;
+}
+#btn:hover:after{
+ top:50%;
+ transition:all 0.5s;
+}
+</style>
+</head>
+<body>
+<div id="btn">
+		
+</div>
+</body>
+</html>

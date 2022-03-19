@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+.card{
+ position:relative;
+ width:50%;
+ }
+img{
+ display:block;
+ width:100%;
+ height:auto;
+}
+.overlay {
+  position: absolute;
+  bottom:100%;
+  width:100%;
+  height:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  background-color:#008CBA;
+  transition: .5s ease;
+}
+
+.card:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  /*overflow: hidden;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="card">
+ <img src="C:\Users\LOKESH\Desktop\images for Project 2020\registration-3938434_1280.webp">
+ <div class="overlay">
+    <div class="text">Hello Agent_B</div>
+ </div>
+</div>
+</body>
+</html>

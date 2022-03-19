@@ -1,0 +1,99 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.page{
+ width:100%;
+ min-height:100vh;
+}
+.header{
+ width:20%;
+ height:100%;
+ background:#000;
+ float:left;
+ color:#fff;
+ margin-left:-100%;
+ transition:0.4s linear;
+}
+.content{
+ height:100%;
+ text-align:center;
+ padding:100px;
+}
+.open{
+ width:300px;
+ margin-top:20px; 
+ cursor:pointer;
+ height:60px;
+ border:none;
+ outline:none;
+ font-size:24px;
+ -webkit-border-radius:10px;
+ background:#000;
+ color:#fff;
+}
+.menu{
+ display:block;
+ padding:0 20px;
+}
+.menu a{
+ text-decoration:none;
+ font-size:26px;
+ color:#fff;
+ display:block;
+ border-bottom:1px solid #f1f1f1;
+ text-align:center;
+ margin:10px;
+ transition:0.3s linear;
+}
+.header h3{
+ font-size:30px;
+ text-align:center;
+ margin-bottom:50px;
+ margin-top:50px;
+}
+.header.active{
+ margin-left:0;
+}
+.menu a:hover{
+ background:#f0932b;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+
+
+<div class="header">
+<h3>Menu</h3>
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Blog</a>
+<a href="#">Shop</a>
+<a href="#">Images</a>
+<a href="#">Contact</a>
+</div>
+</div>
+
+<div class="content">
+<h1>Click On Below Button to get Side Bar</h1>
+<button class="open">Click Here</button>
+</div>
+
+</div>
+<script type="text/javascript">
+  $(".open").click(function(){
+   $(this).toggleClass("fa-times");
+   $(".header").toggleClass("active");
+});
+</script>
+</body>
+</html>

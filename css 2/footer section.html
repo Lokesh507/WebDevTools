@@ -1,0 +1,147 @@
+<html>
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+<style>
+*{
+ margin:0;
+ padding:0;
+}
+body{
+ box-sizing:border-box; 
+ min-height:100vh;
+}
+footer{ 
+ background:#f1f1f1;
+ padding:90px 0;
+}
+.container{
+ max-width:1300px;
+ margin:auto;
+ padding:0 20px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap-reverse;
+}
+.Apple{
+ font-size:100px;
+}
+.media{
+ margin:20px 0;
+}
+.media a{ 
+ color:#001a21;
+ margin-right:25px; 
+ margin-left:5px;
+ font-size:22px;
+ text-decoration:none; 
+ transition:0.3s linear;
+}
+.media a:hover{
+ font-size:26px;
+ color:#fc5c65;
+}
+.media p{
+ font-size:30px;
+ margin:2px 3px;
+ text-decoration:underline;
+ margin-bottom:10px;
+}
+.rightside h1{
+ font-size:26px;
+}
+.border{
+ width:100px;
+ height:4px;
+ background:#fc5c65;
+ margin-bottom:10px;
+}
+form{
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+ justify-content:center;
+ margin-top:10px;
+}
+input[type=text]{
+ background:#ddd;
+ -webkit-border-radius:30px;
+ border:none;
+ outline:none;
+ text-align:center;
+ flex:1;
+ padding:18px 40px;
+ font-size:16px;
+ color:#293043;
+ min-width:260px;
+}
+input[type=submit]{
+ padding:18px 40px;
+ font-size:16px;
+ color:#fff;
+ background:#ee5253; 
+ border:none;
+ outline:none;
+ -webkit-border-radius:30px;
+ font-weight:700;
+ margin-left:20px;
+ cursor:pointer;
+}
+input[type=submit]:hover{
+ opacity:.5;
+}
+.content{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ min-height:100vh;
+ font-size:40px;
+}
+@media only screen and (max-width:960px){
+  footer{
+        max-width:960px;
+   }
+   .leftside{
+        width:100%;
+        text-align:center;
+
+   }
+   .rightside{
+        width:100%;
+        margin-bottom:50px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="content">
+Page Content
+</div>
+<footer>
+<div class="container">
+<div class="leftside">
+<i class="fab fa-apple Apple"></i>
+<div class="media">
+<p>Contact Us</p>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+<p class="copy"> © 2020 Created By Lokesh.All Rights Reserved.</p>
+</div>
+<div class="rightside">
+<h1>Our NewsLetter</h1>
+<div class="border"></div>
+<p>Enter your email to get our latest news and updates</p>
+<form action="">
+<input type="text" placeholder="Enter Your Email">
+<input type="submit" value="submit">
+</form>
+
+</div>
+</div>
+</footer>
+</body>
+</html>

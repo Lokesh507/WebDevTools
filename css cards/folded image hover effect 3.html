@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fold{
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%);
+            width:220px;
+            height:400px;
+            background:url(csk.jpg) no-repeat;
+            background-size: cover;
+            background-position:center ;
+            border-top: 10px solid #ff6d3f;
+            border-bottom: 10px solid #ff6d3f;
+            box-sizing: border-box;
+            transition: 1s;
+            transform:translate(-50%,-50%) skew(0deg) rotateY(0deg);
+        }
+        .fold::before{
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: calc(100% + 20px);
+            border-top: 10px solid #ff8a65;
+            border-bottom: 10px solid #ff8a65;
+            border-left: 10px solid #ff8a65;
+            top:-10px;
+            transform-origin: right;
+            transform:perspective(1000px) skewY(-25deg) rotateY(-90deg); 
+            transition: 1s;
+            left:-80%;
+            box-sizing: border-box;
+            box-shadow: inset -15px 0 15px rgba(0,0,0,.1);
+            background:url(csk.jpg) no-repeat;
+            background-size: cover;
+            background-position:12%;
+        }
+        .fold::after{
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: calc(100% + 20px);
+            border-top: 10px solid #ff8a65;
+            border-bottom: 10px solid #ff8a65;
+            border-right: 10px solid #ff8a65;
+            top:-10px;
+            box-shadow: inset -15px 0 15px rgba(0,0,0,0.1);
+            transform-origin: left;
+            transform:perspective(1000px) skewY(-25deg) rotateY(-90deg); 
+            transition: 1s;
+            right:-80%;
+            box-sizing: border-box;
+            background:url(csk.jpg) no-repeat;
+            background-size: cover;
+            background-position:88% ;
+        }
+        .fold:hover{
+            transform:translate(-50%,-50%) skewY(15deg) rotateY(3deg); 
+        }
+        .fold:hover::before{
+            transform:perspective(1000px) skewY(-25deg) rotateY(0deg); 
+        }
+        .fold:hover::after{
+            transform:perspective(1000px) skewY(-25deg) rotateY(0deg); 
+        }
+    </style>
+</head>
+<body>
+    <div class="fold"></div>
+</body>
+</html>

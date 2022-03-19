@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:#3498db;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:120px;
+ height:60px;
+ }
+.c{
+ position:relative;
+ float:left;
+ height:90%;
+ background:#ecf0f1;
+ width:8px;
+ margin:2px;
+ -webkit-border-radius:10px;
+ animation:load 2s infinite;
+}
+.c1{
+ animation-delay:0.2s;
+}
+.c2{
+ animation-delay:0.4s;
+}
+.c3{
+ animation-delay:0.6s;
+}
+.c4{
+ animation-delay:0.8s;
+}
+.c5{
+ animation-delay:1.0s;
+}
+.c6{
+ animation-delay:1.2s;
+}
+.c7{
+ animation-delay:1.4s;
+}
+.c8{
+ animation-delay:1.6s;
+}
+.c9{
+ animation-delay:1.8s;
+}
+@keyframes load{
+ 0%,100%{
+   transform:scale(0);
+  }
+  50%{
+   transform:scale(1);
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<span class="c"></span>
+<span class="c1 c"></span>
+<span class="c2 c"></span>
+<span class="c3 c"></span>
+<span class="c4 c"></span>
+<span class="c5 c"></span>
+<span class="c6 c"></span>
+<span class="c7 c"></span>
+<span class="c8 c"></span>
+<span class="c9 c"></span>
+</div>
+</body>
+</html>

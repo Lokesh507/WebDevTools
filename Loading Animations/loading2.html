@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+body{ 
+ padding:0;
+ margin:0;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ border:1px solid ;
+ width:60px;
+ height:60px;
+}
+.c{
+ width:20px;
+ height:20px;
+ position:relative;
+ float:left;
+ background:red;
+ animation:animate 2s infinite ease-in-out;
+}
+@keyframes animate{
+ 0%,100%{
+ transform:scale(0);
+ }
+ 50%{
+ transform:scale(1);
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+<span class="c"></span>
+</div>
+</body>
+</html>

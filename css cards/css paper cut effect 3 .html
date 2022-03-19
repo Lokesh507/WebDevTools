@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+          }
+          .container{
+            margin:200px 0 0 350px;
+            font-family:arial;
+          }
+          .container h1{
+            position:relative;
+            font-size:12em;
+            color:rgba(0,0,0,0.2);
+            margin:0;
+            padding:0;
+            transform-origin:bottom;
+              transform:skewX(50deg);
+             letter-spacing:0.2em;
+          }
+          .container h1::before{
+            position:absolute;
+            content:attr(data-title);
+            color:#aaa;
+           transform-origin:bottom;
+              transform:skewX(-50deg) translate(-50px,23px) scaleY(1.5);
+            letter-spacing:0.2em;
+            
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 data-title="LOKESH">LOKESH</h1>
+      </div>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+.dropdown{
+ position:relative;
+ display:inline-block;
+}
+.dropdown-content{
+ display:none;
+ position:absolute;
+ min-width:160px;
+ padding:12px 16px;
+ box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index:1;
+}
+.dropdown:hover .dropdown-content{
+ display:block;
+}
+</style>
+</head>
+<body>
+<div class="dropdown">
+<img src="google.png" width=150px height=100px>
+<div class="dropdown-content">
+<img src="google.png" height=500px width=500px>
+</div>
+</div>
+</body>
+</html>

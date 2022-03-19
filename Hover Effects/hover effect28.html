@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#f1f1f1;
+}
+.box{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ background:#fbc531;
+ width:200px;
+ height:70px;
+ -webkit-border-radius:8px;
+ text-align:center;
+ display:block;
+ overflow:hidden;
+}
+.box p{
+ font-size:24px;
+ background:none;
+ transition:0.4s all;
+ line-height:70px;
+}
+.box i{
+ font-size:30px;
+ background:none;
+ display:block;
+}
+.box:hover p{
+ margin-top:-50px;
+}
+.box:hover i{
+}
+</style>
+</head>
+<body>
+<div class="box">
+<p>Hover Me</p><i class="fab fa-apple icon"></i>
+</div>
+</body>
+</html>

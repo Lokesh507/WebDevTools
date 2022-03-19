@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            width:120px;
+            height:120px;
+            background-color: lightgreen;
+            border-radius: 10px 20px 15px 20px;
+
+        }
+        .two{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 5px 20px 5px 20px;
+        }
+        .three{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 20px 5px;  /*if 2 values are given, then first value applies to top-left and bottom-right,second value applies to top-right and bottom-left*/
+        }
+        .four{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 5px 20px 10px;  /*if three values are given, then first value is used for top-left, second value applied to top-right and bottom-left, third valu applied to bottom-left*/
+        }
+        .five{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 50px/15px;  /*by using slashes,you can give the radius to horizontal borders and vertical borders.the first value is applied to the horizontal borders and the second value is applied to the vertical borders.*/
+        }
+        .six{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 15px/50px;    /*by using slashes,you can give the radius to horizontal borders and vertical borders.the first value is applied to the horizontal borders and the second value is applied to the vertical borders.*/
+        }
+        .seven{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            border-radius: 50%;
+        }
+        .eight{
+            width:120px;
+            height: 120px;
+            background-color: lightgreen;
+            width:200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div><br>
+    <div class="two"></div><br>
+    <div class="three"></div><br>
+    <div class="four"></div><br>
+    <div class="five"></div><br>
+    <div class="six"></div><br>
+    <div class="seven"></div><br>
+    <div class="eight"></div><br>
+</body>
+</html>

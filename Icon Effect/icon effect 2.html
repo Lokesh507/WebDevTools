@@ -1,0 +1,79 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ marign:0;
+ padding:0;
+ background:#000;
+ text-decoration:none;
+}
+.menu{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ width:850px;
+}
+.list{
+ width:150px;
+ margin:0 26px;
+ float:left;
+ text-align:center;
+}	
+.list a{
+ width:60px;
+ height:60px;
+ color:#fff;
+ border:2px solid #fff;
+ -webkit-border-radius:50%;
+ text-align:center;
+ margin-top:-10px;
+ transition:0.4s all;
+ line-height:60px;
+}
+.list span{
+ color:#fff;
+ display:block;
+ margin-top:30px;
+ font-size:24px;
+ transition:0.4s all;
+ opacity:0;
+}
+.list a:hover{
+ margin-top:0px;
+}
+.list a:hover ~ .one{
+ opacity:1;
+ margin-top:10px;
+ transition-delay:.2s;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+
+<div class="list">
+<a href="#" class="fab fa-google"></a>
+<span class="one">Google</span>
+</div>
+
+<div class="list">
+<a href="#" class="fab fa-google-play"></a>
+<span class="one">Google Play Store</span>
+</div>
+
+<div class="list">
+<a href="#" class="fab fa-google-pay"></a>
+<span class="one">Google Pay</span>
+</div>
+
+<div class="list">
+<a href="#" class="fab fa-google-drive"></a>
+<span class="one">Google Drive</span>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:#2c3e50;
+ font-family:'Ionicons';
+}
+.box{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ /*border:1px solid red;*/
+ width:100px;
+ height:100px;
+}
+.container{
+ position:absolute;
+ top:80%;
+ line-height:100px;
+ width:100px;
+ background:red;
+ height:3px;
+}
+.container span{
+ position:absolute;
+ width:30%;
+ height:100%;
+ background:#3498db;
+ animation:load 2s linear infinite;
+}
+
+#a1{
+ float:left;
+ margin-left:16px;
+ color:red;
+ background:black;
+ display:block;
+ text-align:center;
+ overflow:hidden;
+ width:70px;
+ height:70px;
+ text-decoration:none;
+ -webkit-border-radius:50%;
+}
+#a1:before{
+ content:'\f2dd';
+ font-size:60px;
+ width:40%;
+ height:40%;
+}
+@keyframes load{
+ 0%,100%{left:0;}
+ 50%{left:70%;}
+}
+</style>
+</head>
+<body>
+<div class="box">
+<a id="a1" href="#"></a>
+<div class="container"><span></span></div>
+</body>
+</html>

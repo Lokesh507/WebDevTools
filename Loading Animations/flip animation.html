@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+*{
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+ text-transform:uppercase;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:400px;
+ height:200px;
+ border:1px solid ;
+ text-align:center;
+}
+.container h2{
+ margin:50px auto;
+ font-size:34px;
+  cursor:pointer;
+ transition:1.6s all;
+}
+.container .box{
+ width:150px;
+ height:50px;
+ background:#4cd137;
+ position:absolute;
+ left:50%;
+ top:60%;
+ transform:translateX(-50%);
+}
+.container h2:hover{
+ animation:flip 1s linear;
+}
+@keyframes flip{
+ 50%{
+ transform:rotateX(180deg);
+}
+100%{ 
+  transform:rotateX(360deg);
+ }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Flip Animation</h2>
+<div class="box"></div>
+</div>
+</body>
+</html>

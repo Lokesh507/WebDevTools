@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg, #b8ff2e, #2ea8ff);
+}
+
+@mixin flex1($align, $content){
+    display: flex;
+    align-items: $align;
+    justify-content: $content;
+}
+
+@mixin flex2($direction, $align, $content){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $content;
+}
+
+.container{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px 0;
+    .card{
+        position: relative;
+        width: 45%;
+        height: 250px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        border-radius: 20px;
+        cursor: zoom-in;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        &:hover .front{
+            height: 150px;
+            width: 150px;
+            left: -75px;
+            top: calc(50% - 75px);
+        }
+        &:hover .front img{
+            max-width: 100px;
+            filter: invert(1);
+            transition: 0.5s ease-in-out;
+        }
+        .front{
+            position: absolute;
+            left:10px;
+            top:10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            background:rgba(255,255,255,0.1);
+            border-radius: 20px;
+            @include flex1(center,center );
+            z-index: 1;
+            border : 1px solid rgba(255,255,255,0.2);
+            box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+            transition: 0.5s ease-in-out;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .back{
+            position: absolute;
+            right: 0;
+            width: calc(100% - 75px);
+            height: 100%;
+            padding: 20px;
+            @include flex2(column, center,center );
+            h3{
+                color: #ff0057;
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+            p{
+                word-wrap:break-word;
+            }
+            a{
+                margin-top: 10px;
+                padding: 8px 20px;
+                border-radius: 5px;
+                background-color: #0095ff;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 500;
+                display: inline-block;
+            }
+        }
+        &:hover .active{
+            filter: blur(0px);
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
+
+.active{
+    filter: blur(7px);
+}
+
+@media screen and (min-width:500px) and (max-width:768px){
+    .container{
+        width: 100%;
+        min-height: 1000px;
+        @include flex2(column,center ,space-between );
+    }
+    .container .card{
+        width: 60%;
+        height: 200px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:500px){
+    .container{
+        width: 100%;
+        min-height: 1000px;
+        @include flex2(column,center ,space-between );
+    }
+    .container .card{
+        width: 80%;
+        height: 200px;
+        margin: auto;
+    }
+}
+@media screen and (max-width:424px){
+    .container{
+        width: 100%;
+        min-height: 1000px;
+        @include flex2(column,center ,space-between );
+    }
+    .container .card{
+        width: 90%;
+        height: 200px;
+        margin: auto;
+    }
+}

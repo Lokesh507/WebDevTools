@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+}
+.text{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ font-size:120px;
+ font-weight:500;
+ letter-spacing:0.2em;
+ color:gray;
+}
+.text:before{
+ content:'DarkCode';
+ color:black;
+ width:0;
+ position:absolute;
+ overflow:hidden;
+}
+.text:hover:before{
+ width:100%;
+ transition:0.9s;
+}
+</style>
+</head>
+<body>
+<span class="text">DarkCode</span>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#ffb142;
+ text-decoration:none;
+}
+.buttons{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:300px;
+ height:500px;
+}
+.btn{
+ display:block;
+ width:240px;
+ height:80px;
+ background:#ff5252;
+ cursor:pointer;
+ text-align:center;
+ line-height:80px;
+ margin:30px;
+ -webkit-border-radius:7px;
+ color:#fff;
+ font-size:24px;
+}
+.btn1:hover{
+ transform:rotateX(15deg);
+ box-shadow:0 15px 15px #aaa69d;
+}
+.btn2:hover{
+ transform:rotateX(-15deg);
+ box-shadow:0 -15px 15px #aaa69d;
+}
+.btn3:hover{
+ transform:rotateY(15deg);
+ box-shadow:-15px 0 15px #aaa69d;
+}
+.btn4:hover{
+ transform:rotateY(-15deg);
+ box-shadow:15px 0 15px #aaa69d;
+}
+</style>
+</head>
+<body>
+<div class="buttons">
+<a href="#" class="btn1 btn">Hover me</a>
+<a href="#" class="btn2 btn">Hover me</a>
+<a href="#" class="btn3 btn">Hover me</a>
+<a href="#" class="btn4 btn">Hover me</a>
+</div>
+</body>
+</html>

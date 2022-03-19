@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+*{
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+}
+.container{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ border:1px solid ;
+ overflow:hidden;
+}
+button{
+ margin:15px;
+ text-align:center;
+ height:50px;
+ background:none;
+ min-width:200px;
+ border:1px solid ;
+ font-size:24px;
+ padding:12px 20px;
+ text-transform:uppercase;
+ transition:color 0.4s linear;
+ position:relative;
+ display:block;
+}
+button:hover{
+ color:#fff;
+}
+button::before{
+ width:100%;
+ position:absolute;
+ content:'';
+ height:100%;
+ background:#000;
+ left:0;
+ top:0;
+ z-index:-1;
+ transition:transform 0.5s;
+ transform-origin:0 0;
+ transition-timing-function:cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.one::before{
+ transform:scaleX(0);
+}
+.two::before{
+ transform:scaleY(0);
+}
+.one:hover::before{
+ transform:scaleX(1);
+}
+.two:hover::before{
+ transform:scaleY(1);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<button class="one">Hover Me</button>
+<button class="two">Hover Me</button>
+</div>
+</body>
+</html>

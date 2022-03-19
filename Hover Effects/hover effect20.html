@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            background-color: #34495e;
+        }
+        .box{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            width:600px;
+            height:100px;
+        }
+        .box a{
+            float: left;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            margin:0 10px;
+        }
+        .box a i{
+            color: #27ae60;
+            line-height: 60px;
+            font-size: 18px;
+            transition: 0.4s all;
+        }
+        .box a:hover i{
+            font-size: 24px;
+        }
+        .one::before{
+            position: absolute;
+            content: "";
+            width:0%;
+            height: 0%;
+            border-left:2px solid white;
+            border-right: 2px solid white;
+            border-top:2px solid transparent;
+            border-bottom:2px solid transparent;
+            transform: rotate(45deg);
+            z-index: 1;
+            top:100%;
+            left: 10px;
+            opacity: 0;
+            transition: 1.5s all;
+            box-sizing: border-box;
+        }
+        .one::after{
+            box-sizing: border-box;
+            position: absolute;
+            content: "";
+            width:0%;
+            height: 0%;
+            bottom:0%;
+            right: 3px;
+            border-left:2px solid white;
+            border-right: 2px solid white;
+            border-top:2px solid transparent;
+            border-bottom:2px solid transparent;
+            transform: rotate(-45deg);
+            z-index: 1;
+            transition: 1.5s all;
+            opacity: 0;
+        }
+        .one:hover::after{
+            opacity: 1;
+            height: 103%;
+            width: 70%;
+        }
+        .one:hover::before{
+            top:0px;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#" class="one"><i class="fab fa-google"></i></a>
+        <a href="#" class="one"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="one"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="one"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="one"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</body>
+</html>

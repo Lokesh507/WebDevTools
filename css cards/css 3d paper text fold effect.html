@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            background:#000;
+        }
+        .box{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:perspective(1000px) translate(-50%,-50%) skewY(15deg);
+        }
+        .box span{
+            
+            color: white;
+            position: absolute;
+            top:0;
+            left:0;
+            transform: translate(-50%,-50%);
+            margin:0;
+            padding:0;
+            font-size: 8em;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 1s;
+            transform-style: preserve-3d;
+            
+        }
+        .box h1 span:nth-child(1){
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            
+        }
+        .box h1 span:nth-child(2){
+            clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+            color: red;
+            left:-25px;
+            transform:translate(-50%,-50%) skewX(-60deg);
+        }
+        .box h1 span:nth-child(3){
+            clip-path: polygon(0 100%, 100% 100%, 100% 55%, 0 55%);
+            color:white;
+            transform:translate(-50%,-50%) skewX(0deg);
+            left:-50px;
+        }
+        .box:hover {
+            transform:perspective(1000px) translate(-50%,-50%) skewY(0deg);
+        }
+        .box:hover span:nth-child(2){
+            transform:translate(-50%,-50%) skewX(0deg);
+            left:0;
+        }
+        .box:hover span:nth-child(3){
+            transform:translate(-50%,-50%) skewX(0deg);
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>
+            <span>TEXT</span>
+            <span>TEXT</span>
+            <span>TEXT</span>
+        </h1>
+    </div>
+</body>
+</html>

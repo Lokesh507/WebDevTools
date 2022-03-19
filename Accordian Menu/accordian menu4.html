@@ -1,0 +1,104 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body{
+ background:#f1f1f1;
+ display:flex;
+ align-items:center;
+ min-height:100vh;
+ justify-content:center;
+}
+.accordion{ 
+ max-width:600px; 
+ padding:20px;
+}
+.container{
+ border-bottom:1px solid #ddd;
+ padding:20px 0;
+}
+.header{
+ padding:14px 6px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ cursor:pointer;
+}
+.item{
+ font-size:20px;
+ font-weight:600;
+}
+.icon{
+ width:28px;
+ height:28px;
+ border:2px solid #000;
+ -webkit-border-radius:50%;
+ text-align:center;
+ font-size:30px;
+ font-weight:700;
+ line-height:25px;
+}
+.text{
+ color:#888;
+ padding:0 6px;
+ max-height:0;
+ overflow:hidden;
+}
+.container.active .text{
+ max-height:600px;
+ transition:0.4s linear;
+}
+</style>
+</head>
+<body>
+<div classs="accordion">
+
+<div class="container">
+<div class="header">
+<h1 class="item">Design</h1>
+<div class="icon">+</div>
+</div>
+<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+</div>
+
+<div class="container">
+<div class="header">
+<h1 class="item">Websites</h1>
+<div class="icon">+</div>
+</div>
+<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+</div>
+
+<div class="container">
+<div class="header">
+<h1 class="item">Database</h1>
+<div class="icon">+</div>
+</div>
+<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+</div>
+
+<div class="container">
+ <div class="header">
+ <h1 class="item">Sections</h1>
+ <div class="icon">+</div>
+ </div>
+ <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</div>
+
+</div>
+
+<script type="text/javascript">
+$('.header').click(function(){
+ $('.container').removeClass("active");
+ $(this).parent().addClass("active");
+ $(".icon").text("+");
+ $(this).children(".icon").text("-");
+});
+</script>
+</body>
+</html>

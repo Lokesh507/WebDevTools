@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:linear-gradient(0deg,#00a8ff 50%,#fff 0%);
+ font-family:"montserrat",sans-serif;
+}
+.float-text{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ height:30px;
+ padding:0 40px;
+ transform:translateY(-120%) translateX(-50%);
+ text-align:center;
+ font-size:70px;
+ animation:float 7s linear infinite;
+}
+@keyframes float{
+ 0%{transform:translateY(-500%) rotate(0deg);}
+ 25%{transform: rotate(10deg);}
+ 50%{transform: rotate(-10deg);}
+ 75%{transform: rotate(16deg);}
+ 100%{transform: rotate(-16deg);}
+}
+</style>
+</head>
+<body>
+<div class="float-text">Floating Text
+</div>
+</body>
+</html>

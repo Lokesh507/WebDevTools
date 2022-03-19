@@ -1,0 +1,130 @@
+<html>
+	<head>
+	<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" rel="stylesheet">
+	<style>
+		*{
+ 			box-sizing:border-box;
+			margin:0;
+			padding:0;
+			background:#2c3e50; 
+		}
+		.container{
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+/*			display:flex;*/
+		}
+		.card1{
+			margin:3px;
+			position:relative;
+			float:left;
+			cursor:pointer;
+			width:150px;
+			height:150px;
+			background:#3498db;
+			text-transform:uppercase;
+			overflow:hidden;
+		}
+		.card2{
+			margin:3px;
+			position:relative;
+			cursor:pointer;
+			width:310px;
+			height:150px;
+			background:#e74c3c;
+			text-transform:uppercase;
+			overflow:hidden;
+		}
+		.card1:nth-child(2){
+			background:#e74c3c;
+		}
+		.card1:nth-child(3){
+			background:#2ecc71;
+		}
+		.card1:nth-child(4){
+			background:#95a5a6;
+		}
+		.card1:nth-child(5){
+			background:#8e44ad;
+		}
+
+		.card1 i{
+			font-size:60px;
+			position:absolute;
+			left:50%;
+			color:#fff;
+			top:50%;
+			transform:translate(-50%,-50%);
+			border:none;
+			outline:none;
+			background:transparent;
+		}		
+		.card2 i{
+			font-size:60px;
+			position:absolute;
+			left:50%;
+			color:#fff;
+			top:50%;
+			transform:translate(-50%,-50%);
+			border:none;
+			outline:none;
+			background:transparent;
+		}		
+		.card1 span{
+			position:absolute;
+			bottom:10px;
+			left:50%;
+			transform:translateX(-50%);
+			color:#f1f1f1;
+			font-size:22px;
+			background:transparent;
+		} 
+		.card2 span{
+			position:absolute;
+			bottom:10px;
+			left:50%;
+			transform:translateX(-50%);
+			color:#f1f1f1;
+			font-size:22px;
+			background:transparent;
+		}
+		.card1:hover{
+			animation:one 2s;
+		} 
+		.card2:hover{
+			animation:one 2s;
+		} 
+	
+		@keyframes one{
+			
+			to{transform:scale(0.9);}
+		}
+	</style>
+	</head>
+	<body>
+		<diu class="container">
+			<div class="card1">
+				<i class="fab fa-android" aria-hidden="true"></i>
+				<span>Android</span>
+			</div>
+			<div class="card2">
+				<i class="fas fa-video"></i>
+				<span>Videos</span>
+			</div>
+			<div class="card1">
+				<i class="fa fa-music" aria-hidden="true"></i>
+				<span>Music</span>
+			</div>
+			<div class="card1">
+				<i class="fas fa-images"></i>
+				<span>Photos</span>
+			</div>
+			<div class="card1">
+				<i class="fa fa-cog" aria-hidden="true"></i>
+				<span>Settings</span>
+			</div>
+		</div>
+	</body>
+</html>

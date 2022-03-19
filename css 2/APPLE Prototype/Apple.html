@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Apple</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<style>
+*{
+ margin:0;
+ padding:0;
+ font-family:ionIcons;
+ box-sizing:border-box;
+}
+.header{
+ width:100%;
+ background:black;
+ /*border:1px solid ;*/
+ padding:6px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.header i{
+ color:#dcdde1;
+ cursor:pointer;
+ transition:0.5s all;
+}
+.header i:hover{
+	color: #ffffff;
+}
+
+span{
+ color:white;
+ padding:10px;
+}
+span a{
+ text-decoration:none;
+ padding:28px;
+ color:#b2bec3;
+}
+.fas fa-search{
+ font-size:20px;
+}
+.row1{
+ position:relative;
+ width:100%;
+ height:600px;
+ background:#000;
+ cursor:pointer;
+}
+.r1{
+ position:absolute;
+ color:white; 
+ top:10%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ /*text-align:center;*/
+ font-size:50px;
+ font-style:bold;
+ font-weight:900;
+}
+.r2{
+ position:absolute;
+ left:50%; 
+ top:20%;
+ transform:translate(-50%,-50%);
+ color:white;
+ font-size:24px;
+}
+.row1 a{
+ z-index:1;
+ color:#54a0ff;
+ position:absolute;
+ left:50%; 
+ top:28%;
+ transform:translate(-50%,-50%);
+ text-decoration:none;
+ font-size:26px;
+ /*text-align:center;*/
+}
+.row1 a:after{
+ content:'\f125';
+ font-size:22px; 
+ padding-left:16px;
+}
+.row2{
+ position:relative;
+ /*border:2px solid blue;*/
+ height:600px;
+ width:100%;
+ margin-top:20px;
+}
+.r21{
+ position:absolute;
+ left:50%;
+ top:10%;
+ transform:translate(-50%,-50%);
+ /*border:1px solid ;*/
+ font-weight:900;
+ font-size:40px;
+}
+.r22{
+ position:absolute;
+ left:50%;
+ top:18%;
+ transform:translate(-50%,-50%);
+ /*border:1px solid ;*/
+ font-size:40px;
+}
+.row2 a{
+ z-index:1;
+ color:#54a0ff;
+ position:absolute;
+ left:50%; 
+ top:28%;
+ transform:translate(-50%,-50%);
+ text-decoration:none;
+ font-size:26px;
+ /*text-align:center;*/ 
+ /*border:1px solid ;*/
+}
+.row2 a:after{
+ content:'\f125';
+ font-size:22px; 
+ padding-left:16px;
+}
+.image2{
+ position:absolute;
+ width:100%;
+ height:100%;
+ z-index:-1;
+ overflow:hidden;
+ background:url('apple6.jpg') no-repeat;
+ background-position:center;
+ background-size:cover;
+}
+.image3{
+ position:absolute;
+ width:100%;
+ height:100%;
+ z-index:-1;
+ overflow:hidden;
+ background:url('apple5.jpg') no-repeat;
+ background-position:center;
+ background-size:cover;
+}
+.r31{
+ color:white;
+}
+.row3{
+ position:relative;
+ width:100%;
+ height:600px;
+ /*border:2px solid blue;*/
+ margin-top:10px;
+}
+.row3 .left{ 
+ position:relative;
+ width:50%;
+ /*border:1px solid red;*/
+ background:#000;
+ height:100%;
+ float:left;
+}
+ 
+
+.r41{
+ color:white;
+ position:absolute;
+ top:10%;
+ left:50%;
+ transform:translate(-50%,-50%); 
+ font-size:40px;
+}
+.r42{
+ color:white;
+ position:absolute;
+ top:18%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ font-size:30px;
+}
+
+.row3 .right{ 
+ position:relative;
+ width:50%;
+/* border:1px solid red;*/
+ background:#fff;
+ height:100%;
+ float:left;
+ display:flex; 
+ overflow:hidden;
+}
+
+.row3 .left a{
+ top:30%;
+}
+.image4{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-26%);
+ width:300px;
+ height:300px;
+ background:url('apple7.jpg') no-repeat;
+ background-position:center;
+ background-size:contain;
+}
+.r411{
+ position:absolute;
+ height:120px; 
+ width:150px;
+/* border:1px solid ;*/
+ left:50%;
+ transform:translateX(-50%);
+ background:url('apple2.png') no-repeat;
+/* background-size:cover;*/
+ background-position:center;
+ background-size:100% 100%;
+}
+.r422{
+ position:absolute;
+ left:50%;
+ top:21%;
+ transform:translateX(-50%);
+ font-size:26px;
+ color:black;
+ text-align:justify;
+ /*border:1px solid ;*/
+ width:200px;
+ height:150px; 
+}
+
+.image5{ 
+ position:absolute;
+ width:350px; 
+ height:320px;
+ left:50%;
+ top:52.5%;
+ transform:translateX(-50%);
+ border:1px solid ;
+ background:url('apple8.jpg') no-repeat;
+ background-position:center;
+ background-size:cover;
+}
+
+.row3 a{
+ z-index:1;
+ color:#54a0ff;
+ position:absolute;
+ left:50%; 
+ top:50%;
+ transform:translate(-50%,-50%);
+ text-decoration:none;
+ font-size:26px;
+ /*text-align:center;*/ 
+/* border:1px solid ;*/
+}
+.row3 a:after{
+ content:'\f125';
+ font-size:22px; 
+ padding-left:16px;
+}
+
+.row3 .row4{
+ background:url('apple4.jpg') no-repeat;
+ background-position:center;
+ background-size:cover;
+}
+.row3 .row4 a{
+ top:30%;
+}
+
+.row3 .row5{
+ background:url('apple3.jpg') no-repeat;
+ background-position:center;
+ background-size:cover;
+}
+.row3 .row5 a{
+ top:30%;
+}
+
+.r51{
+ position:absolute;
+ color:black; 
+ top:10%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ /*text-align:center;*/
+ font-size:50px;
+ font-style:bold;
+ font-weight:900;
+}
+.r52{
+ position:absolute;
+ left:50%; 
+ top:20%;
+ transform:translate(-50%,-50%);
+ color:black;
+ font-size:24px;
+}
+
+/*.footer{
+ margin-top:10px;
+ padding-top:20px;
+ height:300px;
+ width:100%;
+ background:#aaa; 
+ display:flex;
+ justify-content:space-between; 
+ line-height:1.33337;
+ font-weight:400;
+ letter-spacing:-0.01em;
+ font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ flex-wrap: nowrap;
+}*/
+
+.footer {
+    margin-top:10px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(245, 245, 247);
+    color: rgb(29, 29, 31);
+    min-width: 1024px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.links{
+ border-top:1px solid black;
+ border-bottom:1px solid black;
+ width:90%;
+ margin:46px; 
+ display:flex;
+ justify-content:space-between; 
+
+}
+
+.column{
+ flex-basis:25%;
+}
+.footer ol{
+ list-style-type:none;
+/* border:1px solid ;*/
+ padding:16px 32px;
+ font-size:15px;
+}
+.footer ol li{
+ display:block;
+}
+.footer ol li a{
+ text-decoration:none;
+ color:black;
+ opacity:0.7;
+}
+.footer ol li:nth-child(1){
+ font-weight:900;
+ font-weight:18px;
+}
+
+.summary{
+ position:relative;
+ margin:40px;
+/* border:1px solid red;*/
+ width:90%;
+ height:50px;
+ font-size:17px;
+ display:flex;
+}
+
+.copyright{
+ float:left;
+/* border:1px solid red;*/
+}
+
+.content-ol{
+/* border:1px solid ;*/
+ float:left;
+ margin-top:-16px;
+}
+
+.content-ol li{
+ float:left;
+}
+.content-ol li{
+ border-right:1px solid ;
+}
+.content-ol li a{
+ padding:10px;
+ }
+.content-ol li:nth-child(4){
+ border-right:0px solid red;
+}
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <i class="logo fa fa-apple" aria-hidden="true"></i>
+        <span><a href="#">Mac</a></span>
+        <span><a href="#">iPad</a></span>
+        <span><a href="#">iPhone</a></span>
+        <span><a href="#">Watch</a></span>
+        <span><a href="#">TV</a></span>
+        <span><a href="#">Music</a></span>
+        <span><a href="#">Support</a></span> 
+        <span><a href="#">Where to Buy</a></span> 
+        <span><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+    </div>
+    <div class="row1">
+	<div class="r1">iPhone SE</div>
+	<div class="r2">Lots to love.Less to spend.</div>
+	<a href="#">Learn more</a>
+	<div class="image1">
+		<img src="apple.jpg" style="width:100%;">
+	</div>
+    </div>
+    <div class="row2">
+	<div class="r21">iPhone 11</div>
+	<div class="r22">Just the right amount of everything.</div>
+	<a href="#">Learn more</a>
+	<div class="image2"></div>
+    </div>
+    <div class="row2">
+	<div class="r31 r21">iPhone 11 Pro</div>
+	<div class="r31 r22">Pro cameras.Pro display.Pro performance.</div>
+	<a href="#">Learn more</a>
+	<div class="image3"></div>
+    </div>
+    <div class="row3">
+	<div class="left">
+	<div class="r41">iPhone AirPods.</div>
+	<div class="r42">Experience the new AirPods.</div>
+	<a href="#">Learn more</a>
+	<div class="image4"></div>
+	</div>
+	<div class="right">
+		<div class="r411"></div>
+		<div class="r422">With the Always-On Retina display.You have never seen a watch like this.</div>
+		<a href="#">Learn more</a>
+		<div class="image5"></div>
+		
+	</div>
+    </div>
+    <div class="row3">
+	<div class="row4 left">
+	<div class="r41">MacBook Pro</div>
+	<div class="r42">Power.Moves.</div>
+	<a href="#">Learn more</a>
+	</div>
+	<div class="row5 right">
+		<div class="r51">iPad Pro</div>
+		<div class="r52">Your next computer is not a computer.</div>
+		<a href="#">Learn more</a>
+	</div>
+    </div>
+    <div class="footer">
+	<div class="links">
+
+	<div class="column">
+	<ol>
+		<li>Explore</li>
+		<li><a href="#">Mac</a></li>
+		<li><a href="#">iPad</a></li>
+		<li><a href="#">iPhone</a></li>
+		<li><a href="#">Watch</a></li>
+		<li><a href="#">TV</a></li>
+		<li><a href="#">Music</a></li>
+		<li><a href="#">AirPods</a></li>
+		<li><a href="#">HomePods</a></li>
+		<li><a href="#">iPad touch</a></li>
+	</ol>
+	</div>
+	<div class="column">
+	<ol>
+		<li>Services</li>
+		<li><a href="#">Apple Music</a></li>
+		<li><a href="#">Apple TV+</a></li>
+		<li><a href="#">Apple Arcade</a></li>
+		<li><a href="#">Apple Books</a></li>
+		<li><a href="#">iCloud</a></li>
+	</ol>
+	<ol>
+		<li><a href="#">Account</a></li>
+		<li><a href="#">Manage your Apple Id</a></li>
+		<li><a href="#">iCloud.com</a></li>
+	</ol>	
+	</div>
+	<div class="column">
+	<ol>
+		<li>For Business</li>
+		<li><a href="#">Apple and Business</a></li>
+	</ol>
+	<ol>
+		<li><a href="#">For Education</a></li>
+		<li><a href="#">Apple and Education</a></li>
+	</ol>
+	<ol>
+		<li><a href="#">For Healthcare</a></li>
+		<li><a href="#">Apple in Healthcare</a></li>
+		<li><a href="#">Health on Apple Watch</a></li>
+	</ol>
+	</div>
+	<div class="column">
+	<ol>
+		<li>Apple Programmes</li>
+		<li><a href="#">Recycling</a></li>
+	</ol>
+	<ol>
+		<li><a href="#">Apple Values</a></li>
+		<li><a href="#">Accessibility</a></li>
+		<li><a href="#">Environment</a></li>
+		<li><a href="#">Privacy</a></li>
+		<li><a href="#">Supplier Responsibility</a></li>
+	</ol>
+	</div>
+	<div class="column">
+	<ol>
+		<li>About Apple</li>
+		<li><a href="#">Newsroom</a></li>
+		<li><a href="#">Apple Leadership</a></li>
+		<li><a href="#">Job Opportunities</a></li>
+		<li><a href="#">Investors</a></li>
+		<li><a href="#">Events</a></li>
+		<li><a href="#">Contact Apple</a></li>
+	</ol>	
+	</div>
+	</div>
+	<div class="summary">
+		<div class="copyright">Copyright © 2020 Apple Inc.All rights reserved.</div>
+		<div class="content-ol"><ol><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Legal</a></li><li><a href="#">Site Map</a></li></ol></div>
+	</div>
+    </div>
+</body>
+</html>

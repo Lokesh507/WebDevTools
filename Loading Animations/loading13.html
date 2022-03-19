@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+ background:#3498db;
+}
+.container{
+ width:400px;
+ height:60px;
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+}
+.loading{
+ background-color:#4cd137;
+ width:50px;
+ height:50px;
+ position:fixed;
+ -webkit-border-radius:20%;
+ transform:translateX(-50%) rotate(0);
+ z-index:9999;
+ animation:load 7s linear infinite;
+}
+/*@keyframes load{
+ from{
+   
+   }
+   50%{
+      left:80%;
+    }
+  to{
+   
+  }
+}*/
+@keyframes load{
+  0%  {left:0px;  transform:translate(-50%) rotate(0deg);}
+  50%  {left:500px;}
+  100% {left:0px; transform:translate(-50%) rotate(1440deg);}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<span class="loading"></span>
+</div>
+</body>
+</html>

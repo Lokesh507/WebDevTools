@@ -1,0 +1,150 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+}
+.card{
+ width:90%;
+ margin:auto;
+ background:#f1f1f1;
+}
+.header{
+ width:100%;
+ background:#273c75;
+ padding:40px;
+ text-align:center;
+ color:white;
+}
+.header h1{
+ font-size:40px;
+ letter-spacing:2px;
+ margin-bottom:10px;
+}
+.header input{
+ width:70%;
+ padding:20px;
+ border:none; 
+ outline:none;
+ font-size:20px;
+}
+.box{
+ width:100%;
+ padding:10px;
+}
+.box .profile{
+ width:100%;
+ border:1px solid ;
+ padding:10px;
+ display:flex;
+ align-items:center;
+ margin:6px 0;
+}
+.icon{
+ width:40px;
+ height:40px;
+ background:#2c3e50; 
+ color:white;
+ font-size:24px;
+ text-align:center;
+ line-height:40px;
+ -webkit-border-radius:50%;
+ margin-right:8px;
+}
+.name{
+ font-size:24px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="header">
+<h1>Name Searcher</h1>
+<input type="text" onkeyup="filter()" id="value" placeholder="Type in your name">
+</div>
+<div class="box">
+
+<div class="profile">
+<span class="icon">A</span>
+<span class="name">Armand Glover</span>
+</div>
+
+<div class="profile">
+<span class="icon">B</span>
+<span class="name">Booker Morgan</span>
+</div>
+
+<div class="profile">
+<span class="icon">C</span>
+<span class="name">Caldwell Ashley</span>
+</div>
+
+<div class="profile">
+<span class="icon">D</span>
+<span class="name">Dr. August West</span>
+</div>
+
+<div class="profile">
+<span class="icon">E</span>
+<span class="name">Edward Cameron</span>
+</div>
+
+<div class="profile">
+<span class="icon">H</span>
+<span class="name">Harcourt Ward</span>
+</div>
+
+<div class="profile">
+<span class="icon">L</span>
+<span class="name">Leonard Alton
+</span>
+</div>
+
+<div class="profile">
+<span class="icon">P</span>
+<span class="name">Pierce Bowen</span>
+</div>
+
+<div class="profile">
+<span class="icon">A</span>
+<span class="name">Albert Loyd</span>
+</div>
+
+<div class="profile">
+<span class="icon">P</span>
+<span class="name">Perry Harker</span>
+</div>
+
+<div class="profile">
+<span class="icon">A</span>
+<span class="name">Armand Glover</span>
+</div>
+
+<div class="profile">
+<span class="icon">B</span>
+<span class="name">Booker Nelson</span>
+</div>
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+  function filter(){
+   var value,name,profile,i;
+   value=document.getElementById("value").value.toUpperCase();
+   profile=document.getElementsByClassName("profile");
+   
+   for(i=0;i<profile.length;i++){
+        name=profile[i].getElementsByClassName("name");
+        if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            profile[i].style.display="flex";
+      }else{
+             profile[i].style.display="none";
+      }
+  }
+ }
+</script>
+</body>
+</html>

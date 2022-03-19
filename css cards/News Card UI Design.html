@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
+        body{
+            background:#000;
+        }
+        .container{
+            position: relative;
+            margin:100px auto;
+            width:100%;
+            height:500px;
+            overflow: hidden;
+
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width:90%;
+            margin-left: 50px;
+            height:500px;
+        }
+        .column{
+            border-right:1px solid ;
+            position: relative;
+            transition:0.6s all;
+            margin-right: 16px;
+            height: 700px;
+        }
+        .column .image{
+            position: relative;
+            width:100%;
+            height:500px;
+        }
+        .column .image img{
+            width:100%;
+            height:100%;
+            object-position: center;
+            
+        }
+        .column .image p{
+            position: absolute;
+            bottom:0;
+            width:100px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            background:blue;
+            color:white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .column .menu{
+            width:100%;
+            height:30px;
+            display: flex;
+            color:#fff;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .column article{
+            width:100%;
+            height:300px;
+        }
+        .column article h1{
+            font-size: 30px;
+            color:cyan;
+        }
+        .column article p{
+            text-align: justify;
+            color:#fff;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+        .column:hover{
+            margin-top: -500px;
+        }
+        @media only screen and (max-width:768px){
+            .row{
+                display: block;
+                min-height: 100vh;
+            }
+            .column{
+                width:100%;
+                display: block;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <section class="image">
+                    <img src="football.jfif">
+                    <p>Sports</p>
+                </section>
+                <div class="menu">
+                    <p>Someone Famous</p>
+                    <p><i class="far fa-clock"></i>DEc 6,2017</p>
+                    <p><i class="far fa-comment-dots"></i>12</p>
+                </div>
+                <article>
+                    <h1>
+                        2018 Fifa World Cup Official Theme Song Released.
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </article>
+            </div>
+
+            <div class="column">
+                <section class="image">
+                    <img src="cricket.jfif">
+                    <p>Sports</p>
+                </section>
+                <div class="menu">
+                    <p>Someone Famous</p>
+                    <p><i class="far fa-clock"></i>DEc 6,2017</p>
+                    <p><i class="far fa-comment-dots"></i>12</p>
+                </div>
+                <article>
+                    <h1>
+                        2018 Fifa World Cup Official Theme Song Released.
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </article>
+            </div>
+
+            <div class="column">
+                <section class="image">
+                    <img src="golf.jfif">
+                    <p>Sports</p>
+                </section>
+                <div class="menu">
+                    <p>Someone Famous</p>
+                    <p><i class="far fa-clock"></i>DEc 6,2017</p>
+                    <p><i class="far fa-comment-dots"></i>12</p>
+                </div>
+                <article>
+                    <h1>
+                        2018 Fifa World Cup Official Theme Song Released.
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#34495e;
+}
+.menu{
+ position:absolute;
+ top:40px;
+ right:40px;
+ padding:5px;
+ background:white;
+ font-size:0px;
+}
+.menu a{
+ width:40px;
+ height:40px;
+ float:left;
+ margin:5px;
+}
+#red{
+ background:#e74c3c;
+}
+#blue{
+ background:#2ecc71;
+}
+#green{
+ background:#3498db;
+}
+#gray{
+ background:#192a56;
+}
+#yellow{
+ background:#f1c40f;
+}
+#orange{
+ background:#e1b12c;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+<a href="#" id="red" onclick="changecolor('red')">#e74c3c</a>
+<a href="#" id="blue" onclick="changecolor('blue')">#2ecc71</a>
+<a href="#" id="green" onclick="changecolor('green')">#3498db</a>
+<a href="#" id="gray" onclick="changecolor('gray')">#192a56</a>
+<a href="#" id="yellow" onclick="changecolor('yellow')">#f1c40f</a>
+<a href="#" id="orange" onclick="changecolor('orange')">#e1b12c</a>
+</div>
+
+<script type="text/javascript">
+ function changecolor(id){
+    document.body.style.background = document.getElementById(id).innerHTML;
+ }
+</script>
+</body>
+</html>

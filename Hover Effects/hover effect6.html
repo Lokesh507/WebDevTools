@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+body{
+ margin:0;
+ padding:0;
+}
+.box{
+ position:absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ width:350px;
+ height:350px;
+ background:#ddd;
+ border:1px solid ;
+}
+.inner-box{
+ position:absolute;
+ background-color:black;
+ width:100px;
+ animation:animate 2s  infinite;
+ height:100px;
+}
+@keyframes animate {
+ 0%{ margin:0 0 0 0;}
+ 25%{ margin:0 0 0 250px;}
+ 50%{ margin:120px 0 0 120px;}
+ 75%{ margin:120px 0 0 0;}
+ 100%{ margin:0 0 0 0;}
+}
+</style>
+</head>
+<body>
+<div class="box">
+<span class="inner-box"></span>
+</div>
+</body>
+</html>

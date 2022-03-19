@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+ul{
+ background-color:#aaa;
+ list-style-type:none;
+ margin:0;
+ padding:0;
+ width:200px;
+ border:1px solid black;
+}
+li{
+ color:black;
+ padding:8px 16px;
+ display:block;
+ border-bottom:1px solid black;
+}
+li:last-child{
+ border-bottom:none;
+}
+.active{
+ background-color:#4CAF50;
+}
+li:hover:not(.active){
+ background-color:#ddd;
+}
+</style>
+</head>
+<body>
+<ul>
+<li class="active">Home</li>
+<li>News</li>
+<li>Contact</li>
+<li>About</li>
+</ul>
+</body>
+</html>

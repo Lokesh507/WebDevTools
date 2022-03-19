@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+*{
+ margin:0;
+ padding:0;
+ background:#2f3640;
+}
+body{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+div{
+ color:#fff;
+ font-size:40px;
+}
+</style>
+</head>
+<body>
+<div id="text"></div>
+<script type="text/javascript">
+ var i=0,text;
+ text="Welcome to the Web Development"
+ function typing(){
+    if(i<text.length){
+	document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,50);
+    } 
+}
+typing();
+</script>
+</body>
+</html>

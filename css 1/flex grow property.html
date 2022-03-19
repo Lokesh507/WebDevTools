@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .flex-container{
+            display: flex;
+            width: 350px;
+            height: 100px;
+            border:1px solid ;
+        }
+        .flex-item{
+            text-decoration: none;
+            line-height: 100px;
+            text-align: center;
+            color:white;
+
+        }
+        .item:nth-child(1){
+            flex-grow: 1;
+        }
+        .item:nth-child(2){
+            flex-grow: 3;
+        }
+        .item:nth-child(3){
+            flex-grow: 1;
+        }
+        .item:nth-child(4){
+            flex-grow: 1;
+        }
+        .item:nth-child(5){
+            flex-grow: 1;
+        }
+        .flex-container1,.flex-container2,.flex-container3{
+            width:350px;
+            display: flex;
+            border:1px solid ;
+            height:100px;
+            margin-top: 10px;
+        }
+        .flex-container1 .flex-item1,.flex-container2 .flex-item2,.flex-container3 .flex-item3{
+            text-decoration: none;
+            height: 50px;
+            width: 60px;
+            color: black;
+            border:1px solid ;
+            line-height: 50px;
+            text-align: center;
+        }
+        .item1{
+            flex-wrap: nowrap;
+        }
+        .item2{
+            flex-wrap: wrap;
+        }
+        .item3{
+            flex-wrap: wrap-reverse;
+        }
+        .shrink:nth-child(2){
+            flex-shrink: 1;
+        }
+        .flex-container4{
+            display: flex;
+            width:650px;
+            height: 60px;
+            border:1px solid ;
+            background-color: #8e44ad;
+        }
+        .flex-container4 .justify-content{
+            width:80px;
+            height: 50px;
+            border:1px solid ;
+            border-radius: 8px;
+            margin:3px;
+        }
+        .justify-content:nth-child(even){
+            width:60px;
+        }
+        .start{
+            justify-content: flex-start;
+        }
+        .end{
+            justify-content: flex-end;
+        }
+        .center{
+            justify-content: center;
+        }
+        .between{
+            justify-content: space-between;
+        }
+        .around{
+            justify-content: space-around;
+        }
+        .evenly{
+            justify-content: space-evenly;
+        }
+        .item-align{
+            height: 100px;
+        }
+        .align-start{
+            align-self: flex-start;
+        }
+        .align-end{
+            align-self: flex-end;
+        }
+        .align-center{
+            align-self: center;
+        }
+        .align-baeline{
+            align-self: baseline;
+        }
+        .align-stretch{
+            align-self: stretch;
+        }
+        .align-items-height{
+            height: 100px;
+        }
+        .align-items-start{
+            align-items: flex-start;
+        }
+        .align-items-end{
+            align-items: flex-end;
+        }
+        .align-items-center{
+            align-items:center;
+        }
+        .align-items-baseline{
+            align-items: baseline;
+        }
+        .align-items-stretch{
+            align-items:stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <a href="#" class="item flex-item" style="background-color: red;">Hello</a>
+        <a href="#" class="item flex-item" style="background-color: green;">Bitra</a>
+        <a href="#" class="item flex-item" style="background-color: pink;">Welcome</a>
+        <a href="#" class="item flex-item" style="background-color: lightskyblue;">To</a>
+        <a href="#" class="item flex-item" style="background-color: yellow;">Google</a>
+    </div>
+    <strong>flex-wrap:no-wrap</strong>
+    <div class="item1 flex-container1">
+        <a href="#" class="flex-item1">1</a>
+        <a href="#" class="flex-item1">2</a>
+        <a href="#" class="flex-item1">3</a>
+        <a href="#" class="flex-item1">4</a>
+        <a href="#" class="flex-item1">5</a>
+        <a href="#" class="flex-item1">6</a>
+    </div>
+    <strong>flex-wrap:wrap</strong>
+    <div class="item2 flex-container2">
+        <a href="#" class="flex-item2">1</a>
+        <a href="#" class="flex-item2">2</a>
+        <a href="#" class="flex-item2">3</a>
+        <a href="#" class="flex-item2">4</a>
+        <a href="#" class="flex-item2">5</a>
+        <a href="#" class="flex-item2">6</a>
+    </div>
+    <strong>flex-wrap:wrap-reverse</strong>
+    <div class="item3 flex-container3">
+        <a href="#" class="flex-item3">1</a>
+        <a href="#" class="flex-item3">2</a>
+        <a href="#" class="flex-item3">3</a>
+        <a href="#" class="flex-item3">4</a>
+        <a href="#" class="flex-item3">5</a>
+        <a href="#" class="flex-item3">6</a>
+    </div>
+    <strong>flex-shrink</strong>
+    <div class="flex-container">
+        <a href="#" class="shrink flex-item" style="background-color: red;">Hello</a>
+        <a href="#" class="shrink flex-item" style="background-color: green;">Bitra</a>
+        <a href="#" class="shrink flex-item" style="background-color: pink;">Welcome</a>
+        <a href="#" class="shrink flex-item" style="background-color: lightskyblue;">To</a>
+        <a href="#" class="shrink flex-item" style="background-color: yellow;">Google</a>
+    </div>
+    <strong>justify-content:flex-start</strong>
+    <div class="flex-container4 start">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>justify-content:flex-end</strong>
+    <div class="flex-container4 end">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>justify-content:center</strong>
+    <div class="flex-container4 center">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>justify-content:space-between</strong>
+    <div class="flex-container4 between">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>justify-content:space-around</strong>
+    <div class="flex-container4 around">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>justify-content:space-evenly</strong>
+    <div class="flex-container4 evenly">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+    </div>
+    <strong>align-self</strong>
+    <div class="item-align flex-container4">
+        <a  href="#" class="justify-content align-start" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content align-end" style="background-color: red;"></a>
+        <a  href="#" class="justify-content align-center" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content align-baseline" style="background-color: green;"></a>
+        <a  href="#" class="justify-content align-stretch" style="background-color: lightskyblue;"></a>
+    </div>
+    <strong>align-items:flex-start</strong>
+    <div class="align-items-start align-items-height flex-container4">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content" style="background-color: green;"></a>
+        <a  href="#" class="justify-content" style="background-color: lightskyblue;"></a>
+    </div>
+    <strong>align-items:flex-end</strong>
+    <div class="align-items-end align-items-height  flex-container4">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content" style="background-color: green;"></a>
+        <a  href="#" class="justify-content" style="background-color: lightskyblue;"></a>
+    </div>
+    <strong>align-items:center</strong>
+    <div class="align-items-center align-items-height  flex-container4">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content" style="background-color: green;"></a>
+        <a  href="#" class="justify-content" style="background-color: lightskyblue;"></a>
+    </div>
+    <strong>align-items:baseline</strong>
+    <div class="align-items-baseline align-items-height  flex-container4">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content" style="background-color: green;"></a>
+        <a  href="#" class="justify-content" style="background-color: lightskyblue;"></a>
+    </div>
+    <strong>align-items:stretch</strong>
+    <div class="align-items-stretch align-items-height  flex-container4">
+        <a  href="#" class="justify-content" style="background-color: orange;"></a>
+        <a  href="#" class="justify-content" style="background-color: red;"></a>
+        <a  href="#" class="justify-content" style="background-color: yellow;"></a>
+        <a  href="#" class="justify-content" style="background-color: green;"></a>
+        <a  href="#" class="justify-content" style="background-color: lightskyblue;"></a>
+    </div>
+</body>
+</html>

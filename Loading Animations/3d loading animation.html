@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            background-color: #2b2b2b;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:  translate(-50%,-50%);
+        }
+        .container span{
+            display: inline-block;
+            font-size: 24px;
+            color: rgba(255,255,255,.1);
+            font-family: arial;
+            transition:  1s all;
+            animation:  animate 2s infinite;
+        }
+        .container span:nth-child(1){
+            animation-delay: 1s;
+        }
+        .container span:nth-child(2){
+            animation-delay: 2s;
+        }
+        .container span:nth-child(3){
+            animation-delay: 3s;
+        }
+        .container span:nth-child(4){
+            animation-delay: 4s;
+        }
+        .container span:nth-child(5){
+            animation-delay: 5s;
+        }
+        .container span:nth-child(6){
+            animation-delay: 6s;
+        }
+        .container span:nth-child(7){
+            animation-delay: 7s;
+        }
+        @keyframes animate {
+            0%{
+                color: rgba(255,255,255,.1);
+                transform: translateY(0);
+                margin-left: 0;
+            }
+            25%{
+                color: yellow;
+                transform: translateY(-25px);
+                margin-left: 10px;
+            }
+            100%{
+                color: rgba(255,255,255,.1);
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+</html>

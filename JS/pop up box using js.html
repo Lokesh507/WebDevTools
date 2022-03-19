@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box{
+         position: absolute;
+         left: 50%;
+         top:50%;
+        transform: translate(-50%,-50%);
+        }
+    .box button{
+        border:none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 24px;
+        padding: 10px;
+        background:red;
+        color:white;
+        cursor:pointer;
+    }
+    #card{
+        position: absolute;
+        left: 50%;
+        top:50%;
+       transform: translate(-50%,-50%);
+       width:500px;
+       overflow: hidden;
+       text-align: center;
+       box-shadow:0 0 20px black;
+       border-radius: 8px;
+       z-index: 9999;
+       padding:10px;
+       background-color:#f1f1f1; 
+       cursor: pointer;
+       display: none;
+       
+    }
+    #card span{
+        color:#2ecc71;
+        font-size: 40px;
+        display: block;
+        margin: 20px 0;
+    }
+    #card h1{
+        color: #333;
+    }
+    #card button{
+        background:#3498db;
+        display: inline-block;
+        border-radius: 4px;
+        font-size:20px;
+        padding:10px 30px;
+        outline: none;
+        border:none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <button onclick="change()">Show Box</button>
+    </div>
+    <div id="card">
+        <span><i class="fas fa-check"></i></span>
+        <span>Good Job</span>
+        <button onclick="change()">Close</button>
+    </div>
+    <script>
+        var c=0;
+        function change(){
+ 
+            if(c==0){
+                document.getElementById("card").style.display="block";
+                c=1;
+            }else{
+                document.getElementById("card").style.display="none";
+                c=0;
+            }
+
+        }
+    </script>
+</body>
+</html>

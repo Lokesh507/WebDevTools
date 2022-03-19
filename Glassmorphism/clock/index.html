@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hh" id="hr"></div>
+                    </div>
+                    <div class="minute">
+                        <div class="mm" id="mn"></div>
+                    </div>
+                    <div class="seconds">
+                        <div class="ss" id="sc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const deg = 6;
+            const hc = document.querySelector('#hr');
+            const mc = document.querySelector('#mn');
+            const sec = document.querySelector('#sc');
+
+            setInterval(() => {
+                let day = new Date();
+                let ho = day.getHours() * 30;
+                let mo = day.getMinutes() * deg;
+                let so = day.getSeconds() * deg;
+
+                hc.style.transform = `rotateZ(${ho * (mo / 12)}deg)`;
+                mc.style.transform = `rotateZ(${(mo)}deg)`;
+                sec.style.transform = `rotateZ(${(so)}deg)`;
+            })
+
+
+        </script>
+
+
+    </body>
+
+</html>

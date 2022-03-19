@@ -1,0 +1,104 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+.section{
+ background:#f1f1f1;
+ text-align:center;
+}
+.inner{
+ max-width:1200px;
+ margin:auto;
+ padding:0 20px;
+}
+.section h1{
+ font-size:20px;
+ line-spacing:10px; 
+ text-transform:uppercase;
+}
+.pics{
+ padding:40px 0;
+}
+.pics img{
+ width:80px;
+ height:80px;
+ margin:0 20px;
+ filter:grayscale(100%);
+ transition:0.3s;
+ -webkit-border-radius:50%; 
+ cursor:pointer;
+}
+.pics img:hover, .pics img.active{ 
+ filter:none;
+}
+.contents{
+ max-width:600px;
+ margin:auto;
+}
+.person{ 
+ display:none;
+}
+.person.active{
+ display:block;
+}
+.person p{
+ color:#5c5c5c;
+ margin-bottom:20px;
+}
+.person .description{
+ text-transform:uppercase;
+ letter-spacing:4px;
+ font-size:15px;
+}
+</style>
+</head>
+<body>
+<div class="section">
+<div class="inner">
+<h1>What our Client's say</h1>
+<div class="pics">
+<img src="p1.png" class="active" alt="test-1">
+<img src="p2.png" alt="test-2">
+<img src="p3.png" alt="test-3">
+<img src="p4.png" alt="test-4">
+</div>
+<div class="contents">
+<div class="person active" id="test-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Emy / Developer</span>
+</div>
+
+<div class="person"  id="test-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elimet, consectetur adipisicing eli t. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Carla / Developer</span>
+</div>
+
+<div class="person" id="test-3">
+            <p>Lorem  similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Thomas / Developer</span>
+</div>
+
+<div class="person" id="test-4">
+            <p>Lorem ipsum dolorng elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+            <span class="description">Monica / Developer</span>
+</div>
+</div>
+</div>
+</div>
+    <script type="text/javascript">
+      $('.pics img').click(function(){
+        $(".pics img").removeClass("active");
+        $(this).addClass("active");
+
+        $(".person").removeClass("active");
+        $("#"+$(this).attr("alt")).addClass("active");
+      });
+    </script>
+</body>
+</html>

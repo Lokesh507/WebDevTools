@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $(".back").addClass("active");
+                $(".front").removeClass("active");
+            })
+            $(".btn2").click(function(){
+                $(".back").removeClass("active");
+                $(".front").addClass("active");
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: arial;
+            box-sizing: border-box;
+        }
+        .card{
+            width:350px;
+            margin:100px auto 0;
+            position: relative;
+            height:450px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition: 0.5s;
+            -moz-transform-style: preserve-3d;
+            -moz-transition: 0.5s;
+            -ms-transform-style: preserve-3d;
+            -ms-transition: 0.5s;
+            -o-transform-style: preserve-3d;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+        .card .front{
+            padding:10px;
+            position: absolute;
+            width:100%;
+            height: 100%;
+            background-color: #3498db;
+            color:white;
+            transform: translateX(-100%) rotateY(90deg);
+        }
+        .card .front .inner{
+            width:100%;
+            display: flex;
+            align-items: center;
+            padding:10px;
+            justify-content: space-between;
+        }
+        .card .front h3{
+            font-size: 20px;
+        }
+        .card .front a{
+            font-size: 20px;
+            color:white;
+        }
+        .card .front .inner2{
+            width:100%;
+            text-align: center;
+        }
+        .card .front .inner2 i{
+            font-size:70px;
+            margin-top:20px;
+        }
+        .card .front .inner2 h1{
+            font-size: 60px;
+        }
+        .card .front .inner2 h2{
+            margin-top:10px;
+        }
+        .card .front .inner3{
+            width:100%;
+            margin-top:30px;
+        }
+        .text{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin:10px 0;
+            justify-content: space-between;
+        }
+        .border{
+            width:100%;
+            border:1px solid white;
+        }
+        .card .back{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            color:#fff;
+            background:#ff2877;
+            box-sizing: border-box;
+            transform-origin: left;
+            transition:0.5s;
+            padding:20px;
+            transform:translateX(100%) rotateY(90deg);
+            backface-visibility: hidden;
+        }
+        .back.active{
+            transform:translateX(0) rotateY(0deg);
+        }
+        .card .back a{
+            width:100%;
+            height: 30px;
+            margin-left: 90%;
+            font-size: 24px;
+            color:#fff
+        }
+        .card .back .text{
+            margin-top:20px;
+        }
+        .card .front.active{
+            transform:translateX(0) rotateY(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front active">
+                <div class="inner">
+                    <h3>New Delhi</h3>
+                    <a href="#" class="btn"><i class="fas fa-info-circle"></i></a>
+                </div>
+                <div class="inner2">
+                    <i class="cloud fas fa-cloud"></i>
+                    <h1>8<sup>O</sup></h1>
+                    <h2>Today</h2>
+                </div>
+                <div class="inner3">
+                        <div class="text">
+                            <h3>Sunday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                        </div>
+                        <div class="border"></div>
+                        <div class="text">
+                            <h3>Monday</h3><span><i class="fas fa-temperature-high"></i>6<sup>o</sup></span>
+                        </div>
+                        <div class="border"></div>
+                        <div class="text">
+                            <h3>Tuesday</h3><span><i class="fas fa-fan"></i>2<sup>o</sup></span>
+                        </div>
+                </div>                
+            </div>
+            <div class="back">
+                <a href="#" class="btn2"><i class="fas fa-chevron-circle-left"></i></a>
+                <div class="text">
+                    <h3>Yesterday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Today</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Tomorrow</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Sunday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Monday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Tuesday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+                <div class="border"></div>
+                <div class="text">
+                    <h3>Wednesday</h3><span><i class="fas fa-cloud"></i>9<sup>o</sup></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

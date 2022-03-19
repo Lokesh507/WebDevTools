@@ -1,0 +1,98 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+body{
+ margin:0;
+ padding:0;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ min-height:100vh;
+ background:#f1f1f1;
+}
+.container{
+ width:100%;
+ max-width:600px;
+ padding:0 20px;
+ border:1px solid ;
+ }
+.name{
+ font-weight:900;
+ font-size:20px; 
+ margin:20px 0;
+}
+.per{
+ height:20px;
+ background:#cacaca;
+ -webkit-border-radius:8px;
+}
+.bar{
+ background:#3498db;
+ width:0%;
+ height:20px;
+ -webkit-border-radius:8px;
+ position:relative;
+ transition:1.3s all;
+}
+.bar::before{
+ position:absolute;
+ content:attr(per);
+ width:20px;
+ height:20px;
+ background:#000;
+ color:#fff;
+ text-align:center;
+ top:-35px;
+ right:0;
+ -webkit-border-radius:4px;
+ transform:translateX(50%);
+}
+.bar::after{
+ position:absolute;
+ content:"";
+ width:10px;
+ height:10px;
+ right:0px;
+ top:-21px;
+ transform:translateX(50%) rotate(45deg);
+ background-color:#000;
+ -webkit-border-radius:2px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="skills">
+<div class="name">HTML</div>
+<div class="per">
+<div class="bar" per="90"></div>
+</div>
+</div>
+
+<div class="skills">
+<div class="name">CSS</div>
+<div class="per">
+<div class="bar" per="70"></div>
+</div>
+</div>
+
+<div class="skills">
+<div class="name">JavaScript</div>
+<div class="per">
+<div class="bar" per="60"></div>
+</div>
+</div>
+
+
+</div>
+<script>
+ $('.bar').each(function(){
+  var $this=$(this);
+  var per=$this.attr('per');
+  $this.css("width",per+'%');
+});
+</script>
+</body>
+</html>
